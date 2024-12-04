@@ -1,46 +1,230 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Звіти з лабораторних робіт</title>
     <img src="Olgastudent.jpg" alt="Фото студента" style="max-width: 150px; border-radius: 50%; margin-top: 20px;">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .content {
+            display: flex;
+        }
+
+        .sidebar {
+            margin-right: 20px;
+        }
+
+        .sidebar button {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
         <h1>Звіти з лабораторних робіт з дисципліни:</h1>
         <h2>"ПРОЕКТУВАННЯ ВЕБ ЗАСТОСУВАНЬ"</h2>
         <p>Студентка групи ЗП-зпі41 Корнєва Ольга Андріівна</p>
     </div>
-    
+
     <div class="nav-tabs">
-        <button>Лабораторна робота 1.1</button>
-        <button>Лабораторна робота 1.2</button>
-        <button>Лабораторна робота 2.1</button>
-        <button>Лабораторна робота 2.2</button>
-        <button>Лабораторна робота 3.1</button>
-        <button>Лабораторна робота 3.2</button>
-        <button>Лабораторна робота 4.1</button>
-        <button>Лабораторна робота 4.2</button>
+        <button onclick="showContent(1)">Лабораторна робота 1.1</button>
+        <button onclick="showContent(2)">Лабораторна робота 1.2</button>
+        <button onclick="showContent(3)">Лабораторна робота 2.1</button>
+        <button onclick="showContent(4)">Лабораторна робота 2.2</button>
+        <button onclick="showContent(5)">Лабораторна робота 3.1</button>
+        <button onclick="showContent(6)">Лабораторна робота 3.2</button>
+        <button onclick="showContent(7)">Лабораторна робота 4.1</button>
+        <button onclick="showContent(8)">Лабораторна робота 4.2</button>
     </div>
-    
+
     <div class="content">
         <div class="sidebar">
-            <button>Опис предметного середовища</button>
-            <button>Тема, мета ЛР1, місце розташування сайту, звіту</button>
-            <button>СТРУКТУРА ДОКУМЕНТА</button>
-            <button>HTML-код таблиць</button>
-            <button>HTML-код форми</button>
-            <button>HTML-код зображення</button>
-            <button>Висновки до ЛР1</button>
+            <button id="sidebarButtonDescription" onclick="showText('Опис предметного середовища')">Опис предметного
+                середовища</button>
+            <button id="sidebarButton" onclick="showText('Тема, мета ЛР-1.1, місце розташування сайту, звіту')">Тема,
+                мета ЛР-1.1, місце розташування сайту, звіту</button>
+            <button id="sidebarButtonStructure" onclick="showText('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
+            <button id="sidebarButtonHTMLCodeTables" onclick="showText('HTML-код таблиць')">HTML-код таблиць</button>
+            <button id="sidebarButtonHTMLCodeForm" onclick="showText('HTML-код форми')">HTML-код форми</button>
+            <button id="sidebarButtonHTMLCodePict" onclick="showText('HTML-код зображення')">HTML-код
+                зображення</button>
+            <button id="sidebarButtonConclusion" onclick="showText('Висновки до ЛР-1.1')">Висновки до ЛР-1.1</button>
         </div>
-        
+
         <div class="main-content">
             <h3>Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ</h3>
-            <p>придбати практичні навички роботи з HTML-документом</p>
-            <p>Місце розташування сайту: <a href="#">посилання</a></p>
+            <p>Придбати практичні навички роботи з HTML-документом</p>
+            <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">посилання</a>
+            </p>
         </div>
     </div>
+
+    <script>
+        function showContent(labNumber) {
+            const content = document.querySelector('.main-content');
+            const sidebarButton = document.getElementById('sidebarButton');
+            switch (labNumber) {
+                case 1:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 1.1</h3>
+                         
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p>`;
+                    sidebarButtonHTMLCodeTables.onclick = function () {
+                        const htmlCode = `
+<h2>Our Achievements</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Milestone</th>
+      <th>Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2021</td>
+      <td>Launched AI Assistant Services</td>
+      <td>Empowered 500+ businesses</td>
+    </tr>
+    <tr>
+      <td>2022</td>
+      <td>Introduced Document Intelligence</td>
+      <td>Streamlined workflows</td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td>Expanded Global Reach</td>
+      <td>Served clients in 30+ countries</td>
+    </tr>
+  </tbody>
+</table>`;
+
+                        // Экранирование тегов для отображения как текста
+                        const escapedHTML = htmlCode
+                            .replace(/</g, "&lt;")
+                            .replace(/>/g, "&gt;")
+                            .replace(/\n/g, "<br>"); // Добавляем переносы строк
+
+                        showText(escapedHTML); // Отображаем результат
+                    };
+                    sidebarButtonHTMLCodePict.onclick = function () {
+                        const cssCode = `
+body {
+  background: url('images/robot.jpg') no-repeat center center fixed;
+  background-size: cover;
+}`;
+
+                        // Экранирование для отображения как текста
+                        const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+
+                        showText(escapedCSS); // Отображаем экранированный CSS
+                    };
+                    sidebarButtonHTMLCodeForm.onclick = function () {
+                        const htmlCode = `
+<section class="contact-form">
+  <h2>Contact Us</h2>
+  <form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>`;
+
+                        // Экранирование тегов для отображения как текста
+                        const escapedHTML = htmlCode
+                            .replace(/</g, "&lt;")
+                            .replace(/>/g, "&gt;")
+                            .replace(/\n/g, "<br>"); // Добавляем переносы строк
+
+                        showText(escapedHTML); // Отображаем результат
+                    };
+
+
+                    sidebarButtonStructure.onclick = function () { showText('<b>Структура файлів цього проєкту на GitHub виглядає наступним чином:</b><br><b>.idea (Папка):</b> Ця папка містить налаштування проєкту та метадані, зазвичай використовується IDE JetBrains (наприклад, PyCharm або IntelliJ).<br><b>images (Папка):</b>Каталог, містить зображення, які використовуються у веб-додатку, такі як логотипи, іконки або інші медіа-файли <br><b>index.html (Файл):</b>Основний HTML-файл веб-додатку,  це вхідна точка додатку. Містить структуру веб-сторінки<br><b>styles.css (Файл):</b> CSS-файл, що відповідає за стилізацію HTML-елементів в index.html. Він визначає вигляд веб-сторінки.') };
+                    sidebarButtonDescription.onclick = function () { showText('<b> Опис предметного середовища.</b><br> Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".') };
+                    sidebarButtonConclusion.onclick = function () { showText('<b>Висновки до ЛР-1.1</b><br>Проєкт зі створення веб-сайту для ІТ-компанії "AI-partnerio" передбачає розробку сучасної платформи, яка дозволить не лише демонструвати інноваційні рішення на основі штучного інтелекту, але й забезпечить зручну взаємодію з потенційними клієнтами. '); };
+                    sidebarButton.innerText = 'Тема, мета ЛР-1.1, місце розташування сайту, звіту';
+                    sidebarButton.onclick = function () { showText('<b>Тема:</b> Структура html-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками в html-документі.<br>  <b> Мета:</b> Придбати практичні навички роботи з HTML-документом, таблицями,зображеннями, посиланнями, списками, формами Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.<br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/"> Посилання на веб-застосунок</a>'); };
+
+                    break;
+                case 2:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 1.2</h3>
+                         
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
+                    sidebarButtonStructure.onclick = function () { showText('<b>Структура файлів цього проєкту на GitHub виглядає наступним чином:</b><br><b>.idea (Папка):</b> Ця папка містить налаштування проєкту та метадані, зазвичай використовується IDE JetBrains (наприклад, PyCharm або IntelliJ).<br><b>images (Папка):</b>Каталог, містить зображення, які використовуються у веб-додатку, такі як логотипи, іконки або інші медіа-файли <br><b>index.html (Файл):</b>Основний HTML-файл веб-додатку,  це вхідна точка додатку. Містить структуру веб-сторінки<br><b>styles.css (Файл):</b> CSS-файл, що відповідає за стилізацію HTML-елементів в index.html. Він визначає вигляд веб-сторінки.') };
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-1.2';
+                    sidebarButton.onclick = function () { showText('<b>Тема:</b> каскадні таблиці стилів. селектори. ідентифікатори. стильове оформлення текстових елементів в html-документах.<br><b> Мета:</b>Придбати практичні навички роботи з селекторами тегів, класів, ідентифікаторів; списками, властивостями кольору і фону, оформленням текстових елементів <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a>') };
+                    sidebarButtonDescription.onclick = function () { showText('<b> Опис предметного середовища.</b><br> Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".') };
+                    break;
+                case 3:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 2.1</h3>
+                        
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.1';
+                    sidebarButton.innerText = 'Тема, мета ЛР-2.1, місце розташування сайту, звіту';
+                    break;
+                case 4:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 2.2</h3>
+                        
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.2';
+                    sidebarButton.innerText = 'Тема, мета ЛР-2.2, місце розташування сайту, звіту';
+                    break;
+                case 5:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 3.1</h3>
+                   
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок </a></p>`;
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-3.1';
+                    sidebarButton.innerText = 'Тема, мета ЛР-3.1, місце розташування сайту, звіту';
+                    break;
+                case 6:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 3.2</h3>
+    
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p>`;
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-3.2';
+                    sidebarButton.innerText = 'Тема, мета ЛР-3.2, місце розташування сайту, звіту';
+                    break;
+                case 7:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 4.1</h3>
+                         
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4.1</a></p>`;
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.1';
+                    sidebarButton.innerText = 'Тема, мета ЛР-4.1, місце розташування сайту, звіту';
+                    break;
+                case 8:
+                    content.innerHTML = `
+                        <h3>Лабораторна робота 4.2</h3>
+                        
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4.2</а></п>`;
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.2';
+                    sidebarButton.innerText = 'Тема, мета ЛР-4.2, місце розташування сайту, звіту';
+                    break;
+            }
+        }
+
+        function showText(text) {
+            const content = document.querySelector('.main-content');
+            content.innerHTML = `<p>${text}</p>`;
+        }
+
+    </script>
 </body>
+
 </html>
