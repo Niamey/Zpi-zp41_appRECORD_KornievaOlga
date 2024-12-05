@@ -45,14 +45,14 @@
         <div class="sidebar">
             <button id="sidebarButtonDescription" onclick="showText('Опис предметного середовища')">Опис предметного
                 середовища</button>
-            <button id="sidebarButton" onclick="showText('Тема, мета ЛР-1.1, місце розташування сайту, звіту')">Тема,
+            <button id="sidebarButton" onclick="showText('Тема, мета ЛР , місце розташування сайту, звіту')">Тема,
                 мета ЛР-1.1, місце розташування сайту, звіту</button>
             <button id="sidebarButtonStructure" onclick="showText('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
             <button id="sidebarButtonHTMLCodeTables" onclick="showText('HTML-код таблиць')">HTML-код таблиць</button>
             <button id="sidebarButtonHTMLCodeForm" onclick="showText('HTML-код форми')">HTML-код форми</button>
             <button id="sidebarButtonHTMLCodePict" onclick="showText('HTML-код зображення')">HTML-код
                 зображення</button>
-            <button id="sidebarButtonConclusion" onclick="showText('Висновки до ЛР-1.1')">Висновки до ЛР-1.1</button>
+            <button id="sidebarButtonConclusion" onclick="showText('Висновки до ЛР-1.1')">Висновки до ЛР </button>
         </div>
 
         <div class="main-content">
@@ -153,8 +153,8 @@ body {
 
                     sidebarButtonStructure.onclick = function () { showText('<b>Структура файлів цього проєкту на GitHub виглядає наступним чином:</b><br><p><b>.idea (Папка):</b> Ця папка містить налаштування проєкту та метадані, зазвичай використовується IDE JetBrains (наприклад, PyCharm або IntelliJ).<br><b>images (Папка):</b>Каталог, містить зображення, які використовуються у веб-додатку, такі як логотипи, іконки або інші медіа-файли <br><b>index.html (Файл):</b>Основний HTML-файл веб-додатку,  це вхідна точка додатку. Містить структуру веб-сторінки<br><b>styles.css (Файл):</b> CSS-файл, що відповідає за стилізацію HTML-елементів в index.html. Він визначає вигляд веб-сторінки.</p>') };
                     sidebarButtonDescription.onclick = function () {
-    showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
-};
+                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+                    };
 
                     sidebarButtonConclusion.onclick = function () { showText('<b>Висновки до ЛР-1.1</b><br>Проєкт зі створення веб-сайту для ІТ-компанії "AI-partnerio" передбачає розробку сучасної платформи, яка дозволить не лише демонструвати інноваційні рішення на основі штучного інтелекту, але й забезпечить зручну взаємодію з потенційними клієнтами. '); };
                     sidebarButton.innerText = 'Тема, мета ЛР-1.1, місце розташування сайту, звіту';
@@ -170,8 +170,109 @@ body {
                     sidebarButtonConclusion.innerText = 'Висновки до ЛР-1.2';
                     sidebarButton.onclick = function () { showText('<b>Тема:</b> каскадні таблиці стилів. селектори. ідентифікатори. стильове оформлення текстових елементів в html-документах.<br><b> Мета:</b>Придбати практичні навички роботи з селекторами тегів, класів, ідентифікаторів; списками, властивостями кольору і фону, оформленням текстових елементів <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a>') };
                     sidebarButtonDescription.onclick = function () { showText('<b> Опис предметного середовища.</b><br> Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".') };
-                         
-                    break;
+                    sidebarButtonStructure.innerText = 'СПОСОБИ ПІДКЛЮЧЕННЯ СТИЛІВ із прикладами';
+                    sidebarButton.innerText = 'Тема, мета ЛР-1.2, місце розташування сайту, звіту';
+                    sidebarButtonHTMLCodeTables.innerText = 'Селектори';
+                    sidebarButtonHTMLCodeForm.innerText = 'Самостійна робота №2';
+                    // Добавим функцию для отображения текста
+                    function showText(text) {
+                        const content = document.querySelector('.main-content');
+                        content.innerHTML = text;
+                    }
+
+                    sidebarButtonHTMLCodeTables.onclick = function () {
+                        const newButtonsContainerId = 'newButtonsContainer';
+                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
+
+                        if (newButtonsContainer) {
+                            // Если контейнер с кнопками уже существует, удаляем его
+                            newButtonsContainer.remove();
+                        } else {
+                            // Создаем контейнер для новых кнопок
+                            const newButtonsContainer = document.createElement('div');
+                            newButtonsContainer.id = newButtonsContainerId;
+                            newButtonsContainer.innerHTML = `
+            <button id="newButton1" class="sidebar-button">Селектор тегу</button>
+            <button id="newButton2" class="sidebar-button">Селектор класу</button>
+            <button id="newButton3" class="sidebar-button">Селектор ідентифікатор</button>
+            <button id="newButton4" class="sidebar-button">Інші селектори</button>
+        `;
+
+                            // Найдем элемент кнопки "Самостійна робота №2"
+                            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
+
+                            // Вставим новые кнопки после кнопки "Самостійна робота №2"
+                            sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+
+                            // Добавим обработчики для новых кнопок
+                            document.getElementById('newButton1').onclick = function () {
+                                showText('Текст для нової кнопки 1');
+                            };
+                            document.getElementById('newButton2').onclick = function () {
+                                const selectors = [
+                                    '.hero',
+                                    '.services',
+                                    '.service',
+                                    '.ul',
+                                    '.table-section',
+                                    '.table-section th',
+                                    '.table-section td',
+                                    '.contact-form',
+                                    '.contact-form form',
+                                    '.contact-form input',
+                                    '.contact-form textarea',
+                                    '.contact-form button'
+                                ];
+                                showText('<b>Селектори класів:</b><br>' + selectors.join('<br>'));
+                            };
+                            document.getElementById('newButton3').onclick = function () {
+                                showText('Текст для нової кнопки 3');
+                            };
+                            document.getElementById('newButton4').onclick = function () {
+                                showText('Текст для нової кнопки 3');
+                            };
+                        }
+                    };
+                    sidebarButtonHTMLCodeForm.onclick = function () {
+                        const newButtonsContainerId = 'newButtonsContainer';
+                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
+
+                        if (newButtonsContainer) {
+                            // Если контейнер с кнопками уже существует, удаляем его
+                            newButtonsContainer.remove();
+                        } else {
+                            // Создаем контейнер для новых кнопок
+                            const newButtonsContainer = document.createElement('div');
+                            newButtonsContainer.id = newButtonsContainerId;
+                            newButtonsContainer.innerHTML = `
+            <button id="newButton4" class="sidebar-button"> Шрифт. Google fonts</button>
+            <button id="newButton5" class="sidebar-button">Css таблиці. Фон. Списки </button>
+            <button id="newButton6" class="sidebar-button">Css просунутий</button>
+ 
+        `;
+
+                            // Найдем элемент кнопки "Самостійна робота №2"
+                            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeForm');
+
+                            // Вставим новые кнопки после кнопки "Самостійна робота №2"
+                            sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+
+                            // Добавим обработчики для новых кнопок
+                            document.getElementById('newButton4').onclick = function () {
+                                showText('Текст для нової кнопки 4');
+                            };
+                            document.getElementById('newButton5').onclick = function () {
+                                showText('Текст для нової кнопки 5');
+                            };
+                            document.getElementById('newButton3').onclick = function () {
+                                showText('Текст для нової кнопки 6');
+                            };
+
+                        }
+                        const htmlCodePictButton = document.getElementById('sidebarButtonHTMLCodePict');
+                        htmlCodePictButton.style.display = 'none';
+                    };
+
                 case 3:
                     content.innerHTML = `
                         <h3>Лабораторна робота 2.1</h3>
