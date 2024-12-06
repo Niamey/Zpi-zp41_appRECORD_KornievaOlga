@@ -206,8 +206,30 @@ body {
 
                             // Добавим обработчики для новых кнопок
                             document.getElementById('newButton1').onclick = function () {
-                                showText('Текст для нової кнопки 1');
+                                const selectors = [
+                                    'body',
+                                    'html',
+                                    'header',
+                                    'header nav ul',
+                                    'header nav ul li a',
+                                    '.hero',
+                                    '.services',
+                                    '.service',
+                                    '.service a',
+                                    '.ul',
+                                    '.table-section table',
+                                    '.table-section th',
+                                    '.table-section td',
+                                    '.contact-form form',
+                                    '.contact-form input',
+                                    '.contact-form textarea',
+                                    '.contact-form button',
+                                    '#footer',
+                                    '#main-header'
+                                ];
+                                showText('<b>Селектори тегів:</b><br>' + selectors.join('<br>'));
                             };
+
                             document.getElementById('newButton2').onclick = function () {
                                 const selectors = [
                                     '.hero',
@@ -226,10 +248,10 @@ body {
                                 showText('<b>Селектори класів:</b><br>' + selectors.join('<br>'));
                             };
                             document.getElementById('newButton3').onclick = function () {
-                                showText('Текст для нової кнопки 3');
+                                showText('<b>Селекори ідентифікатори: </b><br> #footer, #main-header3');
                             };
                             document.getElementById('newButton4').onclick = function () {
-                                showText('Текст для нової кнопки 3');
+                                showText(' <b> Універсальний селектор  : </b><br>* { box-sizing: border-box;  } <br><b> Дочірній селектор:</b><br> header > nav { margin-top: 10px;  }<br><b> Сусідній селектор:</b><br> header nav ul li + li { margin-left: 10px;  }');
                             };
                         }
                     };
@@ -259,11 +281,95 @@ body {
 
                             // Добавим обработчики для новых кнопок
                             document.getElementById('newButton4').onclick = function () {
-                                showText('Текст для нової кнопки 4');
+                                showText(
+                                    '<b>html file:</b><br>' +
+                                    '&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>' +
+                                    '<b>styles.css:</b> <br>' +
+                                    'body {<br>' +
+                                    '  background: url(\'images/robot.jpg\') no-repeat center center fixed;<br>' +
+                                    '  background-size: cover;<br>' +
+                                    '  font-family: \'Roboto\', sans-serif;<br>' +
+                                    '}'
+                                );
                             };
+
                             document.getElementById('newButton5').onclick = function () {
-                                showText('Текст для нової кнопки 5');
+                                const selectors = {
+                                    'Таблиці': [
+                                        '.table-section',
+                                        '.table-section th',
+                                        '.table-section td'
+                                    ],
+                                    'Списки': [
+                                        'header nav ul',
+                                        'header nav ul li + li'
+                                    ],
+                                    'Фон': [
+                                        'body',
+                                        '.hero',
+                                        '.service',
+                                        '.ul',
+                                        '.table-section table',
+                                        '.contact-form form'
+                                    ]
+                                };
+
+                                let result = '<b>Селектори:</b><br>';
+                                for (const category in selectors) {
+                                    result += `<b>${category}:</b><br>${selectors[category].join('<br>')}<br><br>`;
+                                }
+
+                                result += '<b>CSS-код:</b><br><pre><code>' +
+                                    `/* Стили для таблиц */
+.table-section {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.table-section th, .table-section td {
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+/* Стили для списков */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul li + li {
+  margin-left: 10px; /* Пример стиля для соседнего селектора */
+}
+
+/* Стили для фона */
+body {
+  background: url('images/robot.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+.hero {
+  background: rgba(0, 0, 0, 0.5);
+}
+.service {
+  background: rgba(0, 0, 0, 0.5);
+}
+.ul {
+  background: rgba(0, 0, 0, 0.5);
+}
+.table-section table {
+  background: rgba(0, 0, 0, 0.5);
+}
+.contact-form form {
+  background: rgba(0, 0, 0, 0.5);
+}` + '</code></pre>';
+
+                                showText(result);
                             };
+
+
                             document.getElementById('newButton3').onclick = function () {
                                 showText('Текст для нової кнопки 6');
                             };
@@ -271,15 +377,16 @@ body {
                         }
                         const htmlCodePictButton = document.getElementById('sidebarButtonHTMLCodePict');
                         htmlCodePictButton.style.display = 'none';
+                        sidebarButton.innerText = 'Тема, мета ЛР-1.2 , місце розташування сайту, звіту';
                     };
-
+                    break;
                 case 3:
                     content.innerHTML = `
-                        <h3>Лабораторна робота 2.1</h3>
+                        <h3>Лабораторна робота  </h3>
                         
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.1';
-                    sidebarButton.innerText = 'Тема, мета ЛР-2.1, місце розташування сайту, звіту';
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР ';
+                    sidebarButton.innerText = 'Тема, мета ЛР  , місце розташування сайту, звіту';
                     break;
                 case 4:
                     content.innerHTML = `
