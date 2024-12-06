@@ -114,6 +114,12 @@
                     sidebarButtonHTMLCodePict.onclick = function () {
                         const cssCode = `
 body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: url('images/robot.jpg') no-repeat center center fixed;
   background-size: cover;
 }`;
@@ -121,8 +127,9 @@ body {
                         // Экранирование для отображения как текста
                         const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 
-                        showText(escapedCSS); // Отображаем экранированный CSS
+                        showText('<b>CSS-код:</b><br>' + escapedCSS); // Отображаем экранированный CSS
                     };
+
                     sidebarButtonHTMLCodeForm.onclick = function () {
                         const htmlCode = `
 <section class="contact-form">
@@ -273,25 +280,34 @@ body {
  
         `;
 
-                            // Найдем элемент кнопки "Самостійна робота №2"
                             const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeForm');
 
-                            // Вставим новые кнопки после кнопки "Самостійна робота №2"
                             sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
 
-                            // Добавим обработчики для новых кнопок
                             document.getElementById('newButton4').onclick = function () {
+                                const cssCode = `
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('images/robot.jpg') no-repeat center center fixed;
+  background-size: cover;
+}`;
+
+                                // Экранирование для отображения как текста
+                                const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+
                                 showText(
                                     '<b>html file:</b><br>' +
                                     '&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>' +
                                     '<b>styles.css:</b> <br>' +
-                                    'body {<br>' +
-                                    '  background: url(\'images/robot.jpg\') no-repeat center center fixed;<br>' +
-                                    '  background-size: cover;<br>' +
-                                    '  font-family: \'Roboto\', sans-serif;<br>' +
-                                    '}'
+                                    escapedCSS
                                 );
                             };
+
 
                             document.getElementById('newButton5').onclick = function () {
                                 const selectors = {
@@ -302,15 +318,18 @@ body {
                                     ],
                                     'Списки': [
                                         'header nav ul',
-                                        'header nav ul li + li'
+                                        'left-menu ul',
+                                        'left-menu ul li',
+                                        'additional-info ul',
+                                        'additional-info ol'
                                     ],
                                     'Фон': [
                                         'body',
                                         '.hero',
                                         '.service',
-                                        '.ul',
-                                        '.table-section table',
-                                        '.contact-form form'
+                                        '.additional-info',
+                                        '.table-section',
+                                        '#footer'
                                     ]
                                 };
 
@@ -321,15 +340,19 @@ body {
 
                                 result += '<b>CSS-код:</b><br><pre><code>' +
                                     `/* Стили для таблиц */
-.table-section {
+.table-section table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
 }
 .table-section th, .table-section td {
-  padding: 10px;
-  border: 1px solid #fff;
+  padding: 8px;
+  text-align: left;
+}
+.table-section th {
+  background: rgba(0, 0, 0, 0.6);
+}
+.table-section tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Стили для списков */
@@ -340,8 +363,16 @@ header nav ul {
   display: flex;
   justify-content: space-around;
 }
-header nav ul li + li {
-  margin-left: 10px; /* Пример стиля для соседнего селектора */
+left-menu ul {
+  list-style: none;
+  padding: 0;
+}
+left-menu ul li {
+  margin-bottom: 20px;
+}
+additional-info ul,
+additional-info ol {
+  padding-left: 20px;
 }
 
 /* Стили для фона */
@@ -351,28 +382,46 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .hero {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 .service {
   background: rgba(0, 0, 0, 0.5);
 }
-.ul {
-  background: rgba(0, 0, 0, 0.5);
+.additional-info,
+.table-section {
+  background: rgba(0, 0, 0, 0.6);
 }
-.table-section table {
-  background: rgba(0, 0, 0, 0.5);
-}
-.contact-form form {
-  background: rgba(0, 0, 0, 0.5);
+#footer {
+  background: rgba(0, 0, 0, 0.6);
 }` + '</code></pre>';
 
                                 showText(result);
                             };
 
 
-                            document.getElementById('newButton3').onclick = function () {
-                                showText('Текст для нової кнопки 6');
+
+                            document.getElementById('newButton6').onclick = function () {
+                                const cssCode = `
+/* Анімація появи */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Стилі для анімації та закруглення кутів */
+.fade-in {
+  animation: fadeIn 2s ease-in;
+  border-radius: 10px; /* Закруглення кутів */
+  padding: 10px; /* Додаємо відступи, щоб закруглені кути були видимі */
+  background: rgba(0, 0, 0, 0.1); /* Легкий фон для наочності закруглених кутів */
+}`;
+
+                                // Екранування для відображення як тексту
+                                const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+
+                                showText('<b>CSS-код:</b><br>' + escapedCSS); // Відображаємо екранований CSS
                             };
+
 
                         }
                         const htmlCodePictButton = document.getElementById('sidebarButtonHTMLCodePict');
