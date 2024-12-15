@@ -546,9 +546,9 @@ body {
 
                             sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
                         }
-             // Когда кнопка с ID 'newButton5' нажата, выполняется этот код
-             document.getElementById('newButton5').onclick = function () {
-    content.innerHTML = `
+                        // Когда кнопка с ID 'newButton5' нажата, выполняется этот код
+                        document.getElementById('newButton5').onclick = function () {
+                            content.innerHTML = `
         <h3>Гумова блокова верстка</h3>  
         <pre><code>
             Секція Key Features (#features):  
@@ -583,9 +583,9 @@ body {
     height: 400px;            
   }     </code></pre>
     `;
-};
-document.getElementById('newButton4').onclick = function () {
-    content.innerHTML = `<h3>Гумова таблична верстка</h3>  
+                        };
+                        document.getElementById('newButton4').onclick = function () {
+                            content.innerHTML = `<h3>Гумова таблична верстка</h3>  
     <pre>
     &lt;section id="flexible-table-section" style="background-color: #f9f9f9; padding: 40px;"&gt;
         &lt;h2 style="text-align: center;"&gt;Flexible Table Layout&lt;/h2&gt;
@@ -617,7 +617,7 @@ document.getElementById('newButton4').onclick = function () {
         &lt;/div&gt;
     &lt;/section&gt;
     </pre>`;
-}; 
+                        };
                     };
                     sidebarButtonHTMLCodeForm.onclick = function () {
                         const newButtonsContainerId = 'newButtonsContainers';
@@ -646,7 +646,7 @@ document.getElementById('newButton4').onclick = function () {
         `;
                         };
                         document.getElementById('newButton6').onclick = function () {
-    content.innerHTML = ` Стилі проекту:
+                            content.innerHTML = ` Стилі проекту:
 <pre style="white-space: pre-wrap; font-family: monospace; line-height: 1.5;">
 * {
     margin: 0;
@@ -816,9 +816,9 @@ header nav ul li a {
 }
 </pre>
     `;
-};
+                        };
 
-                         
+
                         document.getElementById('newOlgasButton5').onclick = function () {
 
                             content.innerHTML = `  <p> HTML код проекту:</p>
@@ -944,9 +944,9 @@ header nav ul li a {
     &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
     `;
                         };
- 
-                    sidebarButtonStructure.onclick = function () {
-                        content.innerHTML = `
+
+                        sidebarButtonStructure.onclick = function () {
+                            content.innerHTML = `
         <h3>Завдання 1: Зовнішній вигляд макету</h3>
         <p>Макет проекту:</p>
         <img src= "images/maket-1.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
@@ -1073,23 +1073,252 @@ header nav ul li a {
   &lt;footer id="footer-2"&gt;
     &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
     `;
+                        };
                     };
-                };
                     break;
                 case 4:
                     content.innerHTML = `
                         <h3>Лабораторна робота 2.2</h3>
                         
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.2';
+                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.2'; 
+                    sidebarButtonConclusion.onclick = function () {
+                        showText('<b>Висновки до ЛР-2.2:</b><br>  Лабораторна робота дозволила на практиці закріпити знання та навички з адаптивної верстки, медіа-запитів та мета-тега viewport. В результаті вдалося створити веб-сторінку, що коректно відображається на різних пристроях, і застосувати принципи Mobile First для досягнення найкращої продуктивності та користувацького досвіду.');
+                    };
                     sidebarButton.innerText = 'Тема, мета ЛР-2.2, місце розташування сайту, звіту';
+                    sidebarButtonStructure.innerText = 'Медіа -запити ';
+                    sidebarButtonHTMLCodeTables.innerText = 'Мобайл версія ';
+                    sidebarButtonHTMLCodeForm.innerText = 'Десктоп версія';
+                    sidebarButtonHTMLCodePict.innerText = "Планшет версія";
+                    sidebarButtonDescription.onclick = function () {
+                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+                    };
                     sidebarButton.onclick = function () {
                         showText('<b>Тема:</b> АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT.<br><p><b>Мета:</b> Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції. Метатег viewport. Інструменти розробника. Стратегія Mobile First.</p> <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>');
-                        sidebarButtonStructure.innerText = 'Завдання 1. Зовнішній вигляд макету. Код макету.';
-                        sidebarButtonStructure.innerText = 'Медіа -запити ';
-                        sidebarButtonDescription.onclick = function () {
-                            showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+                        sidebarButtonStructure.onclick = function () {
+                            content.innerHTML = `
+    <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
+/* Мобильний режим */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list li a {
+        font-size: 1rem;
+    }
+}
+
+/* Стилі для десктопа   */
+@media (min-width: 1024px) {
+ 
+    header nav ul {
+        justify-content: flex-start;
+    }
+
+    header nav ul li {
+        margin-left: 20px;
+    }
+
+    header nav ul li a {
+        margin-left: 0;
+    }
+
+    .nav {
+        gap: 50px;
+    }
+
+    .nav-list {
+        gap: 50px;
+    }
+
+    .nav-list li a {
+        font-size: 1.4rem;
+    }
+
+    .video-container {
+        padding: 30px;
+    }
+
+    .stories-container {
+        justify-content: space-between;
+    }
+
+    .story {
+        width: 25%;
+    }
+
+    .faq-item {
+        flex: 1 1 calc(25% - 40px);
+        max-width: 250px;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        font-size: 16px;
+    }
+}
+
+/* Стилі для планшету   */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .nav {
+      flex-direction: row;
+      gap: 30px;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      gap: 25px;
+  }
+
+  .faq-item {
+      flex: 1 1 calc(50% - 40px);
+  }
+
+  .story {
+      width: 45%;
+  }
+}
+</pre>
+    `;
                         };
+                        sidebarButtonHTMLCodeTables.onclick = function () {
+                            content.innerHTML = `
+    <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
+/* Мобильний режим */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list li a {
+        font-size: 1rem;
+    }
+}
+    </pre>
+    `;
+                        };
+
+                        sidebarButtonHTMLCodeForm.onclick = function () {
+                            content.innerHTML = `
+    <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
+/* Стилі для десктопа   */
+@media (min-width: 1024px) {
+ 
+    header nav ul {
+        justify-content: flex-start;
+    }
+
+    header nav ul li {
+        margin-left: 20px;
+    }
+
+    header nav ul li a {
+        margin-left: 0;
+    }
+
+    .nav {
+        gap: 50px;
+    }
+
+    .nav-list {
+        gap: 50px;
+    }
+
+    .nav-list li a {
+        font-size: 1.4rem;
+    }
+
+    .video-container {
+        padding: 30px;
+    }
+
+    .stories-container {
+        justify-content: space-between;
+    }
+
+    .story {
+        width: 25%;
+    }
+
+    .faq-item {
+        flex: 1 1 calc(25% - 40px);
+        max-width: 250px;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        font-size: 16px;
+    }
+}
+    </pre>
+    `;
+                        }
+
+                        sidebarButtonHTMLCodePict.onclick = function () {
+                            content.innerHTML = `
+    <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
+/* Стилі для планшету   */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .nav {
+      flex-direction: row;
+      gap: 30px;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      gap: 25px;
+  }
+
+  .faq-item {
+      flex: 1 1 calc(50% - 40px);
+  }
+
+  .story {
+      width: 45%;
+  }
+}
+</pre>
+    `;
+                        }; 
                     };
 
                     break;
