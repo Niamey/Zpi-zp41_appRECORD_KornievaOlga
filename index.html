@@ -527,49 +527,186 @@ body {
                     sidebarButtonStructure.innerText = 'Завдання 1. Зовнішній вигляд макету. Код макету.';
                     sidebarButtonHTMLCodeTables.innerText = 'Завдання №2';
                     sidebarButtonHTMLCodeForm.innerText = 'Завдання №3 Flexbox';
-                    sidebarButtonHTMLCodePict.style.display = "none"; 
+                    sidebarButtonHTMLCodePict.style.display = "none";
                     sidebarButtonHTMLCodeTables.onclick = function () {
-    const newButtonsContainerId = 'newButtonsContainers';
-    const newButtonsContainer = document.getElementById(newButtonsContainerId);
+                        const newButtonsContainerId = 'newButtonsContainers';
+                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
 
-    if (newButtonsContainer) {
-        // If the container with buttons already exists, remove it
-        newButtonsContainer.remove();
-    } else {
-        // Create a new container for the buttons
-        const newButtonsContainer = document.createElement('div');
-        newButtonsContainer.id = newButtonsContainerId;
-        newButtonsContainer.innerHTML = `
+                        if (newButtonsContainer) {
+                            // If the container with buttons already exists, remove it
+                            newButtonsContainer.remove();
+                        } else {
+                            // Create a new container for the buttons
+                            const newButtonsContainer = document.createElement('div');
+                            newButtonsContainer.id = newButtonsContainerId;
+                            newButtonsContainer.innerHTML = `
             <button id="newButton4" class="sidebar-button">  Гумова таблична верстка</button>
             <button id="newButton5" class="sidebar-button">Гумова блокова верстка </button>     `;
-            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
+                            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
 
-sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
-    }
-};
-sidebarButtonHTMLCodeForm.onclick = function () {
-    const newButtonsContainerId = 'newButtonsContainers';
-    const newButtonsContainer = document.getElementById(newButtonsContainerId);
+                            sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+                        }
+                    };
+                    sidebarButtonHTMLCodeForm.onclick = function () {
+                        const newButtonsContainerId = 'newButtonsContainers';
+                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
 
-    if (newButtonsContainer) {
-        // If the container with buttons already exists, remove it
-        newButtonsContainer.remove();
-    } else {
-        // Create a new container for the buttons
-        const newButtons1Container = document.createElement('div');
-        newButtons1Container.id = newButtonsContainerId;
-        newButtons1Container.innerHTML = `
-            <button id="newButton4" class="sidebar-button">  Скрішот  сторінки(FLEXBOX)</button>
-            <button id="newButton5" class="sidebar-button">HTML-код FLEXBOX </button>   
+                        if (newButtonsContainer) {
+                            // If the container with buttons already exists, remove it
+                            newButtonsContainer.remove();
+                        } else {
+                            // Create a new container for the buttons
+                            const newButtons1Container = document.createElement('div');
+                            newButtons1Container.id = newButtonsContainerId;
+                            newButtons1Container.innerHTML = `
+            <button id="newOlgasButton4" class="sidebar-button">  Скрішот  сторінки(FLEXBOX)</button>
+            <button id="newOlgasButton5" class="sidebar-button">HTML-код FLEXBOX </button>   
             <button id="newButton6" class="sidebar-button">CSS-код FLEXBOX </button>    
             `;
-            const sidebarButtonHTMLCodeTablesElement1 = document.getElementById('sidebarButtonHTMLCodeForm');
+                            const sidebarButtonHTMLCodeTablesElement1 = document.getElementById('sidebarButtonHTMLCodeForm');
 
-sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons1Container);
-    }
+                            sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons1Container);
+                        }
+                        document.getElementById('newOlgasButton4').onclick = function () {
+
+                            content.innerHTML = `  <img src= "images/maket-1.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
+           <img src= "images/maket-2.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
+        `;
+                        };
+                        document.getElementById('newButton6').onclick = function () {
+
+content.innerHTML = `   CSS- код проекту
+`;
 };
-                    sidebarButtonStructure.onclick = function () {    
-    content.innerHTML = `
+                         
+                        document.getElementById('newOlgasButton5').onclick = function () {
+
+                            content.innerHTML = `  <p> HTML код проекту:</p>
+           <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;AI Assistants Development&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles-ai-development-assiastance.css"&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Header --&gt;
+  &lt;header id="main-header-2"&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#about-ai"&gt;About AI&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#benefits"&gt;Benefits&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href="#faq"&gt;FAQ&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Ask Us&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;!-- Main Banner --&gt;
+  &lt;section id="banner" style="text-align: center; padding: 20px; background-color: #f4f4f4;"&gt;
+    &lt;h1&gt;AI Assistants Development&lt;/h1&gt;
+    &lt;p&gt;We provide intelligent, efficient, and scalable AI solutions for your business!&lt;/p&gt;
+    &lt;img src="images/ai-banner.jpeg" alt="AI Banner" style="max-width: 200%; height: auto;"&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Key Features Section --&gt;
+  &lt;section id="features" style="background-color: #fff; padding: 40px;"&gt;
+    &lt;h2 style="text-align: center;"&gt;Why Choose AI Solutions?&lt;/h2&gt;
+    &lt;div style="display: flex; justify-content: space-around;"&gt;
+      &lt;div style="flex: 1; text-align: center; padding: 10px;"&gt;
+        &lt;h3&gt;Automation&lt;/h3&gt;
+        &lt;p&gt;Reduce repetitive tasks and improve productivity.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style="flex: 1; text-align: center; padding: 10px;"&gt;
+        &lt;h3&gt;Personalization&lt;/h3&gt;
+        &lt;p&gt;Enhance user experience with tailored interactions.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div style="flex: 1; text-align: center; padding: 10px;"&gt;
+        &lt;h3&gt;Scalability&lt;/h3&gt;
+        &lt;p&gt;Adapt AI to suit growing business needs.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Success Stories --&gt;
+  &lt;section id="success-stories"&gt;  
+    &lt;div class="video-container"&gt;
+      &lt;h2&gt;Success Stories&lt;/h2&gt;
+      &lt;div class="stories-container"&gt;
+        &lt;div class="story"&gt;
+          &lt;h3&gt;Project Alpha&lt;/h3&gt;
+          &lt;p&gt;Automated customer support for global enterprise.&lt;/p&gt;
+          &lt;video controls&gt;
+            &lt;source src="videos/video-1.mp4" type="video/mp4"&gt;
+            Your browser does not support the video tag.
+          &lt;/video&gt;
+        &lt;/div&gt;
+        &lt;div class="story"&gt;
+          &lt;h3&gt;Project Beta&lt;/h3&gt;
+          &lt;p&gt;Developed a predictive analytics tool for finance.&lt;/p&gt;
+          &lt;video controls&gt;
+            &lt;source src="videos/video-2.mp4" type="video/mp4"&gt;
+            Your browser does not support the video tag.
+          &lt;/video&gt;
+        &lt;/div&gt;
+        &lt;div class="story"&gt;
+          &lt;h3&gt;Project Gamma&lt;/h3&gt;
+          &lt;p&gt;Personalized recommendations for an e-commerce platform.&lt;/p&gt;
+          &lt;video controls&gt;
+            &lt;source src="videos/video-3.mp4" type="video/mp4"&gt;
+            Your browser does not support the video tag.
+          &lt;/video&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- FAQ Section --&gt;
+  &lt;section id="faq"&gt;
+    &lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
+    &lt;div class="faq-container"&gt;
+      &lt;div class="faq-item"&gt;
+        &lt;img src="images/faq1.jpeg" alt="AI Automation"&gt;
+        &lt;h3&gt;What is AI automation?&lt;/h3&gt;
+        &lt;p&gt;AI automation refers to the use of artificial intelligence to streamline and automate repetitive tasks, saving time and resources.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="faq-item"&gt;
+        &lt;img src="images/faq2.jpeg" alt="Personalization in AI"&gt;
+        &lt;h3&gt;How does AI enhance personalization?&lt;/h3&gt;
+        &lt;p&gt;AI analyzes user data to deliver tailored experiences, improving customer satisfaction and engagement.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="faq-item"&gt;
+        &lt;img src="images/faq3.jpeg" alt="AI Scalability"&gt;
+        &lt;h3&gt;Is AI scalable for growing businesses?&lt;/h3&gt;
+        &lt;p&gt;Yes, AI solutions can scale efficiently to meet the growing needs of your business.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Contact Us --&gt;
+  &lt;section id="contact" style="background-color: #f4f4f4; padding: 40px; text-align: center;"&gt;
+    &lt;h2&gt;Contact Us&lt;/h2&gt;
+    &lt;form action="/submit" method="POST" style="display: inline-block; text-align: left;"&gt;
+      &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
+      &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+      &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+      &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+      &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+      &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+      &lt;button type="submit"&gt;Send&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+
+  &lt;footer id="footer-2"&gt;
+    &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
+    `;
+                        };
+ 
+                    sidebarButtonStructure.onclick = function () {
+                        content.innerHTML = `
         <h3>Завдання 1: Зовнішній вигляд макету</h3>
         <p>Макет проекту:</p>
         <img src= "images/maket-1.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
@@ -696,9 +833,9 @@ sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons
   &lt;footer id="footer-2"&gt;
     &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
     `;
-}; 
-
-                  break;
+                    };
+                };
+                    break;
                 case 4:
                     content.innerHTML = `
                         <h3>Лабораторна робота 2.2</h3>
@@ -711,8 +848,8 @@ sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons
                         sidebarButtonStructure.innerText = 'Завдання 1. Зовнішній вигляд макету. Код макету.';
                         sidebarButtonStructure.innerText = 'Медіа -запити ';
                         sidebarButtonDescription.onclick = function () {
-                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
-                    };
+                            showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+                        };
                     };
 
                     break;
