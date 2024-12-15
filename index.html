@@ -546,6 +546,78 @@ body {
 
                             sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
                         }
+             // Когда кнопка с ID 'newButton5' нажата, выполняется этот код
+             document.getElementById('newButton5').onclick = function () {
+    content.innerHTML = `
+        <h3>Гумова блокова верстка</h3>  
+        <pre><code>
+            Секція Key Features (#features):  
+&lt;div style="display: flex; flex-wrap: wrap; justify-content: space-around;"&gt;
+    &lt;div style="flex: 1; padding: 10px;"&gt;Блок 1&lt;/div&gt;
+    &lt;div style="flex: 1; padding: 10px;"&gt;Блок 2&lt;/div&gt;
+    &lt;div style="flex: 1; padding: 10px;"&gt;Блок 3&lt;/div&gt;
+&lt;/div&gt;
+
+    
+        Секція Success Stories
+        
+         &lt;div class="stories-container"&gt;
+         &lt;div class="story"&gt;
+        &lt;/div&gt;
+         .stories-container {
+    display: flex;               
+    justify-content: space-between;  
+    gap: 20px;                 
+    flex-wrap: wrap;           
+  }
+ 
+  .story {
+    width: 30%;  
+    text-align: center;        
+    margin: 10px 0;            
+  }
+  
+   
+  .story video {
+    width: 100%;               
+    height: 400px;            
+  }     </code></pre>
+    `;
+};
+document.getElementById('newButton4').onclick = function () {
+    content.innerHTML = `<h3>Гумова таблична верстка</h3>  
+    <pre>
+    &lt;section id="flexible-table-section" style="background-color: #f9f9f9; padding: 40px;"&gt;
+        &lt;h2 style="text-align: center;"&gt;Flexible Table Layout&lt;/h2&gt;
+        &lt;div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;"&gt;
+            &lt;div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;"&gt;
+                &lt;h3&gt;Block 1&lt;/h3&gt;
+                &lt;p&gt;Some content for Block 1. You can put any data here.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;"&gt;
+                &lt;h3&gt;Block 2&lt;/h3&gt;
+                &lt;p&gt;Some content for Block 2. This block could include more complex data.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;"&gt;
+                &lt;h3&gt;Block 3&lt;/h3&gt;
+                &lt;p&gt;Content for Block 3. Flexible and adaptable content area.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;"&gt;
+                &lt;h3&gt;Block 4&lt;/h3&gt;
+                &lt;p&gt;Another block with different content.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;"&gt;
+                &lt;h3&gt;Block 5&lt;/h3&gt;
+                &lt;p&gt;This is Block 5 with some additional information.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;"&gt;
+                &lt;h3&gt;Block 6&lt;/h3&gt;
+                &lt;p&gt;Content for Block 6. It can be as simple or complex as needed.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    </pre>`;
+}; 
                     };
                     sidebarButtonHTMLCodeForm.onclick = function () {
                         const newButtonsContainerId = 'newButtonsContainers';
