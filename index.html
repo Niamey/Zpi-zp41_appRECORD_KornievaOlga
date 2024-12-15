@@ -528,6 +528,25 @@ body {
                     sidebarButtonHTMLCodeTables.innerText = 'Завдання №2';
                     sidebarButtonHTMLCodeForm.innerText = 'Завдання №3 Flexbox';
                     sidebarButtonHTMLCodePict.style.display = "none"; 
+                    sidebarButtonHTMLCodeTables.onclick = function () {
+    const newButtonsContainerId = 'newButtonsContainers';
+    const newButtonsContainer = document.getElementById(newButtonsContainerId);
+
+    if (newButtonsContainer) {
+        // If the container with buttons already exists, remove it
+        newButtonsContainer.remove();
+    } else {
+        // Create a new container for the buttons
+        const newButtonsContainer = document.createElement('div');
+        newButtonsContainer.id = newButtonsContainerId;
+        newButtonsContainer.innerHTML = `
+            <button id="newButton4" class="sidebar-button">  Гумова таблична верстка</button>
+            <button id="newButton5" class="sidebar-button">Гумова блокова верстка </button>     `;
+            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
+
+sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+    }
+};
                     sidebarButtonStructure.onclick = function () {    
     content.innerHTML = `
         <h3>Завдання 1: Зовнішній вигляд макету</h3>
@@ -657,6 +676,7 @@ body {
     &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
     `;
 }; 
+
                   break;
                 case 4:
                     content.innerHTML = `
