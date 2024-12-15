@@ -547,6 +547,27 @@ body {
 sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
     }
 };
+sidebarButtonHTMLCodeForm.onclick = function () {
+    const newButtonsContainerId = 'newButtonsContainers';
+    const newButtonsContainer = document.getElementById(newButtonsContainerId);
+
+    if (newButtonsContainer) {
+        // If the container with buttons already exists, remove it
+        newButtonsContainer.remove();
+    } else {
+        // Create a new container for the buttons
+        const newButtons1Container = document.createElement('div');
+        newButtons1Container.id = newButtonsContainerId;
+        newButtons1Container.innerHTML = `
+            <button id="newButton4" class="sidebar-button">  Скрішот  сторінки(FLEXBOX)</button>
+            <button id="newButton5" class="sidebar-button">HTML-код FLEXBOX </button>   
+            <button id="newButton6" class="sidebar-button">CSS-код FLEXBOX </button>    
+            `;
+            const sidebarButtonHTMLCodeTablesElement1 = document.getElementById('sidebarButtonHTMLCodeForm');
+
+sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons1Container);
+    }
+};
                     sidebarButtonStructure.onclick = function () {    
     content.innerHTML = `
         <h3>Завдання 1: Зовнішній вигляд макету</h3>
