@@ -2,79 +2,79 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Звіти з лабораторних робіт</title>
-    <img src="Olgastudent.jpg" alt="Фото студента" style="max-width: 150px; border-radius: 50%; margin-top: 20px;">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .content {
-            display: flex;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Звіти з лабораторних робіт</title>
+  <img src="Olgastudent.jpg" alt="Фото студента" style="max-width: 150px; border-radius: 50%; margin-top: 20px;">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      display: flex;
+    }
 
-        .sidebar {
-            margin-right: 20px;
-        }
+    .sidebar {
+      margin-right: 20px;
+    }
 
-        .sidebar button {
-            display: block;
-            margin: 10px 0;
-        }
-    </style>
+    .sidebar button {
+      display: block;
+      margin: 10px 0;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Звіти з лабораторних робіт з дисципліни:</h1>
-        <h2>"ПРОЕКТУВАННЯ ВЕБ ЗАСТОСУВАНЬ"</h2>
-        <p>Студентка групи ЗП-зпі41 Корнєва Ольга Андріівна</p>
+  <div class="header">
+    <h1>Звіти з лабораторних робіт з дисципліни:</h1>
+    <h2>"ПРОЕКТУВАННЯ ВЕБ ЗАСТОСУВАНЬ"</h2>
+    <p>Студентка групи ЗП-зпі41 Корнєва Ольга Андріівна</p>
+  </div>
+
+  <div class="nav-tabs">
+    <button onclick="showContent(1)">Лабораторна робота 1.1</button>
+    <button onclick="showContent(2)">Лабораторна робота 1.2</button>
+    <button onclick="showContent(3)">Лабораторна робота 2.1</button>
+    <button onclick="showContent(4)">Лабораторна робота 2.2</button>
+    <button onclick="showContent(5)">Лабораторна робота 3.1</button>
+    <button onclick="showContent(6)">Лабораторна робота 3.2</button>
+    <button onclick="showContent(7)">Лабораторна робота 4.1</button>
+    <button onclick="showContent(8)">Лабораторна робота 4.2</button>
+  </div>
+
+  <div class="content">
+    <div class="sidebar">
+      <button id="sidebarButtonDescription" onclick="showText('Опис предметного середовища')">Опис предметного
+        середовища</button>
+      <button id="sidebarButton" onclick="showText('Тема, мета ЛР , місце розташування сайту, звіту')">Тема,
+        мета ЛР-1.1, місце розташування сайту, звіту</button>
+      <button id="sidebarButtonStructure" onclick="showText('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
+      <button id="sidebarButtonHTMLCodeTables" onclick="showText('HTML-код таблиць')">HTML-код таблиць</button>
+      <button id="sidebarButtonHTMLCodeForm" onclick="showText('HTML-код форми')">HTML-код форми</button>
+      <button id="sidebarButtonHTMLCodePict" onclick="showText('HTML-код зображення')">HTML-код
+        зображення</button>
+      <button id="sidebarButtonConclusion" onclick="showText('Висновки до ЛР-1.1')">Висновки до ЛР </button>
     </div>
 
-    <div class="nav-tabs">
-        <button onclick="showContent(1)">Лабораторна робота 1.1</button>
-        <button onclick="showContent(2)">Лабораторна робота 1.2</button>
-        <button onclick="showContent(3)">Лабораторна робота 2.1</button>
-        <button onclick="showContent(4)">Лабораторна робота 2.2</button>
-        <button onclick="showContent(5)">Лабораторна робота 3.1</button>
-        <button onclick="showContent(6)">Лабораторна робота 3.2</button>
-        <button onclick="showContent(7)">Лабораторна робота 4.1</button>
-        <button onclick="showContent(8)">Лабораторна робота 4.2</button>
+    <div class="main-content">
+      <h3>Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ</h3>
+      <p>Придбати практичні навички роботи з HTML-документом</p>
+      <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">посилання</a>
+      </p>
     </div>
+  </div>
 
-    <div class="content">
-        <div class="sidebar">
-            <button id="sidebarButtonDescription" onclick="showText('Опис предметного середовища')">Опис предметного
-                середовища</button>
-            <button id="sidebarButton" onclick="showText('Тема, мета ЛР , місце розташування сайту, звіту')">Тема,
-                мета ЛР-1.1, місце розташування сайту, звіту</button>
-            <button id="sidebarButtonStructure" onclick="showText('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
-            <button id="sidebarButtonHTMLCodeTables" onclick="showText('HTML-код таблиць')">HTML-код таблиць</button>
-            <button id="sidebarButtonHTMLCodeForm" onclick="showText('HTML-код форми')">HTML-код форми</button>
-            <button id="sidebarButtonHTMLCodePict" onclick="showText('HTML-код зображення')">HTML-код
-                зображення</button>
-            <button id="sidebarButtonConclusion" onclick="showText('Висновки до ЛР-1.1')">Висновки до ЛР </button>
-        </div>
-
-        <div class="main-content">
-            <h3>Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ</h3>
-            <p>Придбати практичні навички роботи з HTML-документом</p>
-            <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">посилання</a>
-            </p>
-        </div>
-    </div>
-
-    <script>
-        function showContent(labNumber) {
-            const content = document.querySelector('.main-content');
-            const sidebarButton = document.getElementById('sidebarButton');
-            switch (labNumber) {
-                case 1:
-                    content.innerHTML = `
+  <script>
+    function showContent(labNumber) {
+      const content = document.querySelector('.main-content');
+      const sidebarButton = document.getElementById('sidebarButton');
+      switch (labNumber) {
+        case 1:
+          content.innerHTML = `
                         <h3>Лабораторна робота 1.1</h3>
                          
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p>`;
-                    sidebarButtonHTMLCodeTables.onclick = function () {
-                        const htmlCode = `
+          sidebarButtonHTMLCodeTables.onclick = function () {
+            const htmlCode = `
 <h2>Our Achievements</h2>
 <table>
   <thead>
@@ -103,16 +103,16 @@
   </tbody>
 </table>`;
 
-                        // Экранирование тегов для отображения как текста
-                        const escapedHTML = htmlCode
-                            .replace(/</g, "&lt;")
-                            .replace(/>/g, "&gt;")
-                            .replace(/\n/g, "<br>"); // Добавляем переносы строк
+            // Экранирование тегов для отображения как текста
+            const escapedHTML = htmlCode
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/\n/g, "<br>"); // Добавляем переносы строк
 
-                        showText(escapedHTML); // Отображаем результат
-                    };
-                    sidebarButtonHTMLCodePict.onclick = function () {
-                        const cssCode = `
+            showText(escapedHTML); // Отображаем результат
+          };
+          sidebarButtonHTMLCodePict.onclick = function () {
+            const cssCode = `
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -124,14 +124,14 @@ body {
   background-size: cover;
 }`;
 
-                        // Экранирование для отображения как текста
-                        const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+            // Экранирование для отображения как текста
+            const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 
-                        showText('<b>CSS-код:</b><br>' + escapedCSS); // Отображаем экранированный CSS
-                    };
+            showText('<b>CSS-код:</b><br>' + escapedCSS); // Отображаем экранированный CSS
+          };
 
-                    sidebarButtonHTMLCodeForm.onclick = function () {
-                        const htmlCode = `
+          sidebarButtonHTMLCodeForm.onclick = function () {
+            const htmlCode = `
 <section class="contact-form">
   <h2>Contact Us</h2>
   <form action="/submit" method="POST">
@@ -148,53 +148,53 @@ body {
   </form>
 </section>`;
 
-                        // Экранирование тегов для отображения как текста
-                        const escapedHTML = htmlCode
-                            .replace(/</g, "&lt;")
-                            .replace(/>/g, "&gt;")
-                            .replace(/\n/g, "<br>"); // Добавляем переносы строк
+            // Экранирование тегов для отображения как текста
+            const escapedHTML = htmlCode
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/\n/g, "<br>"); // Добавляем переносы строк
 
-                        showText(escapedHTML); // Отображаем результат
-                    };
+            showText(escapedHTML); // Отображаем результат
+          };
 
-                    sidebarButtonDescription.onclick = function () { showText('<b> Опис предметного середовища.</b><br> Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".') };
-                    sidebarButtonStructure.onclick = function () { showText('<b>Структура файлів цього проєкту на GitHub виглядає наступним чином:</b><br><p><b>.idea (Папка):</b> Ця папка містить налаштування проєкту та метадані, зазвичай використовується IDE JetBrains (наприклад, PyCharm або IntelliJ).<br><b>images (Папка):</b>Каталог, містить зображення, які використовуються у веб-додатку, такі як логотипи, іконки або інші медіа-файли <br><b>index.html (Файл):</b>Основний HTML-файл веб-додатку,  це вхідна точка додатку. Містить структуру веб-сторінки<br><b>styles.css (Файл):</b> CSS-файл, що відповідає за стилізацію HTML-елементів в index.html. Він визначає вигляд веб-сторінки.</p>') };
-                    sidebarButtonDescription.onclick = function () {
-                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
-                    };
+          sidebarButtonDescription.onclick = function () { showText('<b> Опис предметного середовища.</b><br> Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".') };
+          sidebarButtonStructure.onclick = function () { showText('<b>Структура файлів цього проєкту на GitHub виглядає наступним чином:</b><br><p><b>.idea (Папка):</b> Ця папка містить налаштування проєкту та метадані, зазвичай використовується IDE JetBrains (наприклад, PyCharm або IntelliJ).<br><b>images (Папка):</b>Каталог, містить зображення, які використовуються у веб-додатку, такі як логотипи, іконки або інші медіа-файли <br><b>index.html (Файл):</b>Основний HTML-файл веб-додатку,  це вхідна точка додатку. Містить структуру веб-сторінки<br><b>styles.css (Файл):</b> CSS-файл, що відповідає за стилізацію HTML-елементів в index.html. Він визначає вигляд веб-сторінки.</p>') };
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+          };
 
-                    sidebarButtonConclusion.onclick = function () { showText('<b>Висновки до ЛР-1.1</b><br>Проєкт зі створення веб-сайту для ІТ-компанії "AI-partnerio" передбачає розробку сучасної платформи, яка дозволить не лише демонструвати інноваційні рішення на основі штучного інтелекту, але й забезпечить зручну взаємодію з потенційними клієнтами. '); };
-                    sidebarButton.innerText = 'Тема, мета ЛР-1.1, місце розташування сайту, звіту';
-                    sidebarButton.onclick = function () { showText('<b>Тема:</b> Структура html-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками в html-документі.<br><p>  <b> Мета:</b> Придбати практичні навички роботи з HTML-документом, таблицями,зображеннями, посиланнями, списками, формами Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</p>  <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/"> Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>'); };
+          sidebarButtonConclusion.onclick = function () { showText('<b>Висновки до ЛР-1.1</b><br>Проєкт зі створення веб-сайту для ІТ-компанії "AI-partnerio" передбачає розробку сучасної платформи, яка дозволить не лише демонструвати інноваційні рішення на основі штучного інтелекту, але й забезпечить зручну взаємодію з потенційними клієнтами. '); };
+          sidebarButton.innerText = 'Тема, мета ЛР-1.1, місце розташування сайту, звіту';
+          sidebarButton.onclick = function () { showText('<b>Тема:</b> Структура html-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками в html-документі.<br><p>  <b> Мета:</b> Придбати практичні навички роботи з HTML-документом, таблицями,зображеннями, посиланнями, списками, формами Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</p>  <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/"> Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>'); };
 
-                    break;
-                case 2:
-                    content.innerHTML = `
+          break;
+        case 2:
+          content.innerHTML = `
                         <h3>Лабораторна робота 1.2</h3>
                          
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
-                    sidebarButtonHTMLCodePict.style.display = "none";
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-1.2';
-                    sidebarButtonConclusion.onclick = function () {
-                        showText('<b>Висновки по роботі №1.2: Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів в HTML-документах</b><br><b><p> Переваги використання каскадних таблиць стилів (CSS):</p></b><br>1. <b>Модульність та організованість:</b> CSS дозволяє створювати зручні та структуровані стилі для різних елементів, що спрощує редагування та підтримку зовнішнього вигляду веб-сторінки.<br>2. <b>Гнучкість:</b> Можливість застосовувати різні стилі до елементів за допомогою тегів, класів та ідентифікаторів дає велику гнучкість у дизайні.<br>3. <b>Адаптивність:</b> Каскадні таблиці стилів дозволяють легко налаштовувати відображення веб-сторінок на різних пристроях, завдяки використанню медіа-запитів.<br>4. <b>Швидкість завантаження сторінок:</b> Оскільки стильові файли зберігаються окремо від HTML-коду, це зменшує розмір документа та прискорює його завантаження.<br><b><p>Недоліки використання каскадних таблиць стилів:</p></b><br>1. <b>Перекриття стилів:</b> Каскадні властивості інколи можуть призводити до небажаних перекриттів, коли один стиль перекриває інший. Це може спричиняти труднощі в управлінні стилями, особливо в великих проєктах.<br>2. <b>Невідповідність між браузерами:</b> Існує ймовірність того, що стилі можуть виглядати по-різному в різних браузерах, якщо вони не підтримують певні CSS-властивості або мають різні інтерпретації стандартів.<br>3. <b>Використання вбудованих стилів:</b> Надмірне використання вбудованих стилів у HTML-коді замість зовнішніх CSS-файлів може ускладнити підтримку сайту.<br><b>Переваги використання селекторів та ідентифікаторів:</b><br>1. <b>Точність та специфічність:</b> Селектори тегів, класів та ідентифікаторів дозволяють точно вказати елементи, до яких слід застосувати стиль, що зменшує ймовірність помилок у дизайні.<br>2. <b>Гнучкість у стилізації:</b> Використання різних типів селекторів (теги, класи, ідентифікатори) дає можливість ефективно стилізувати як окремі елементи, так і групи елементів.<br>3. <b>Підтримка багаторазового використання стилів:</b> Класи та ідентифікатори дозволяють використовувати один і той самий стиль для кількох елементів або створювати унікальні стилі для конкретних елементів на сторінці.<br><b>Недоліки використання селекторів та ідентифікаторів:</b><br>1. <b>Конфлікти селекторів:</b> Іноді застосування кількох селекторів до одного елемента може призвести до конфліктів або неочікуваних результатів, особливо якщо не враховуються специфічність та каскадність стилів.<br>2. <b>Важливість правильного структурного підходу:</b> Для ефективного використання селекторів необхідно правильно структурувати HTML-код і CSS, що може бути складним в умовах великого проєкту.<br><b>Оформлення текстових елементів в HTML-документах:</b><br>1. <b>Шрифти та контури:</b> Використання шрифтів через Google Fonts дозволяє створювати привабливий дизайн, а контури тексту допомагають виділити важливі елементи на сторінці.<br>2. <b>Фон та колір тексту:</b> Оформлення фону та кольору тексту допомагає зробити інтерфейс більш привабливим і зручним для користувачів.<br>3. <b>Таблиці та списки:</b> Стильове оформлення таблиць і списків дозволяє забезпечити зручність користування та полегшує сприйняття інформації.<br><b>Загальні висновки:</b><br>1. Використання CSS для оформлення веб-документів значно підвищує їхню естетичність, зручність і адаптивність.<br>2. Робота з селекторами дозволяє значно спростити керування стилями та дає можливість створювати гнучкі та масштабовані дизайни.<br>3. Застосування правильних технік стилізації тексту, таблиць та списків допомагає створити не тільки привабливий, але й функціональний веб-сайт.');
-                    };
+          sidebarButtonHTMLCodePict.style.display = "none";
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-1.2';
+          sidebarButtonConclusion.onclick = function () {
+            showText('<b>Висновки по роботі №1.2: Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів в HTML-документах</b><br><b><p> Переваги використання каскадних таблиць стилів (CSS):</p></b><br>1. <b>Модульність та організованість:</b> CSS дозволяє створювати зручні та структуровані стилі для різних елементів, що спрощує редагування та підтримку зовнішнього вигляду веб-сторінки.<br>2. <b>Гнучкість:</b> Можливість застосовувати різні стилі до елементів за допомогою тегів, класів та ідентифікаторів дає велику гнучкість у дизайні.<br>3. <b>Адаптивність:</b> Каскадні таблиці стилів дозволяють легко налаштовувати відображення веб-сторінок на різних пристроях, завдяки використанню медіа-запитів.<br>4. <b>Швидкість завантаження сторінок:</b> Оскільки стильові файли зберігаються окремо від HTML-коду, це зменшує розмір документа та прискорює його завантаження.<br><b><p>Недоліки використання каскадних таблиць стилів:</p></b><br>1. <b>Перекриття стилів:</b> Каскадні властивості інколи можуть призводити до небажаних перекриттів, коли один стиль перекриває інший. Це може спричиняти труднощі в управлінні стилями, особливо в великих проєктах.<br>2. <b>Невідповідність між браузерами:</b> Існує ймовірність того, що стилі можуть виглядати по-різному в різних браузерах, якщо вони не підтримують певні CSS-властивості або мають різні інтерпретації стандартів.<br>3. <b>Використання вбудованих стилів:</b> Надмірне використання вбудованих стилів у HTML-коді замість зовнішніх CSS-файлів може ускладнити підтримку сайту.<br><b>Переваги використання селекторів та ідентифікаторів:</b><br>1. <b>Точність та специфічність:</b> Селектори тегів, класів та ідентифікаторів дозволяють точно вказати елементи, до яких слід застосувати стиль, що зменшує ймовірність помилок у дизайні.<br>2. <b>Гнучкість у стилізації:</b> Використання різних типів селекторів (теги, класи, ідентифікатори) дає можливість ефективно стилізувати як окремі елементи, так і групи елементів.<br>3. <b>Підтримка багаторазового використання стилів:</b> Класи та ідентифікатори дозволяють використовувати один і той самий стиль для кількох елементів або створювати унікальні стилі для конкретних елементів на сторінці.<br><b>Недоліки використання селекторів та ідентифікаторів:</b><br>1. <b>Конфлікти селекторів:</b> Іноді застосування кількох селекторів до одного елемента може призвести до конфліктів або неочікуваних результатів, особливо якщо не враховуються специфічність та каскадність стилів.<br>2. <b>Важливість правильного структурного підходу:</b> Для ефективного використання селекторів необхідно правильно структурувати HTML-код і CSS, що може бути складним в умовах великого проєкту.<br><b>Оформлення текстових елементів в HTML-документах:</b><br>1. <b>Шрифти та контури:</b> Використання шрифтів через Google Fonts дозволяє створювати привабливий дизайн, а контури тексту допомагають виділити важливі елементи на сторінці.<br>2. <b>Фон та колір тексту:</b> Оформлення фону та кольору тексту допомагає зробити інтерфейс більш привабливим і зручним для користувачів.<br>3. <b>Таблиці та списки:</b> Стильове оформлення таблиць і списків дозволяє забезпечити зручність користування та полегшує сприйняття інформації.<br><b>Загальні висновки:</b><br>1. Використання CSS для оформлення веб-документів значно підвищує їхню естетичність, зручність і адаптивність.<br>2. Робота з селекторами дозволяє значно спростити керування стилями та дає можливість створювати гнучкі та масштабовані дизайни.<br>3. Застосування правильних технік стилізації тексту, таблиць та списків допомагає створити не тільки привабливий, але й функціональний веб-сайт.');
+          };
 
 
-                    sidebarButton.onclick = function () { showText('<b>Тема:</b> каскадні таблиці стилів. селектори. ідентифікатори. стильове оформлення текстових елементів в html-документах.<br><b> Мета:</b>Придбати практичні навички роботи з селекторами тегів, класів, ідентифікаторів; списками, властивостями кольору і фону, оформленням текстових елементів <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>') };
-                    sidebarButtonDescription.onclick = function () {
-                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
-                    };
-                    sidebarButtonStructure.innerText = 'СПОСОБИ ПІДКЛЮЧЕННЯ СТИЛІВ із прикладами';
-                    sidebarButton.innerText = 'Тема, мета ЛР-1.2, місце розташування сайту, звіту';
-                    sidebarButtonHTMLCodeTables.innerText = 'Селектори';
-                    sidebarButtonHTMLCodeForm.innerText = 'Самостійна робота №2';
-                    // Добавим функцию для отображения текста
-                    function showText(text) {
-                        const content = document.querySelector('.main-content');
-                        content.innerHTML = text;
-                    }
-                    sidebarButtonStructure.onclick = function () {
-                        const htmlCode = `
+          sidebarButton.onclick = function () { showText('<b>Тема:</b> каскадні таблиці стилів. селектори. ідентифікатори. стильове оформлення текстових елементів в html-документах.<br><b> Мета:</b>Придбати практичні навички роботи з селекторами тегів, класів, ідентифікаторів; списками, властивостями кольору і фону, оформленням текстових елементів <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>') };
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+          };
+          sidebarButtonStructure.innerText = 'СПОСОБИ ПІДКЛЮЧЕННЯ СТИЛІВ із прикладами';
+          sidebarButton.innerText = 'Тема, мета ЛР-1.2, місце розташування сайту, звіту';
+          sidebarButtonHTMLCodeTables.innerText = 'Селектори';
+          sidebarButtonHTMLCodeForm.innerText = 'Самостійна робота №2';
+          // Добавим функцию для отображения текста
+          function showText(text) {
+            const content = document.querySelector('.main-content');
+            content.innerHTML = text;
+          }
+          sidebarButtonStructure.onclick = function () {
+            const htmlCode = `
     Тема: Способи підключення стилів в HTML.
 
     Існує три основні способи підключення стилів:
@@ -254,116 +254,116 @@ body {
     Вони дозволяють підлаштовувати вигляд сторінки під різні розміри екранів.
   `;
 
-                        // Екранірування тегів для коректного відображення в браузері
-                        const escapedHTML = htmlCode
-                            .replace(/</g, "&lt;")
-                            .replace(/>/g, "&gt;")
-                            .replace(/\n/g, "<br>");
+            // Екранірування тегів для коректного відображення в браузері
+            const escapedHTML = htmlCode
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/\n/g, "<br>");
 
-                        // Вивід тексту
-                        showText(escapedHTML);
-                    };
+            // Вивід тексту
+            showText(escapedHTML);
+          };
 
 
-                    sidebarButtonHTMLCodeTables.onclick = function () {
-                        const newButtonsContainerId = 'newButtonsContainer';
-                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
+          sidebarButtonHTMLCodeTables.onclick = function () {
+            const newButtonsContainerId = 'newButtonsContainer';
+            const newButtonsContainer = document.getElementById(newButtonsContainerId);
 
-                        if (newButtonsContainer) {
-                            // Если контейнер с кнопками уже существует, удаляем его
-                            newButtonsContainer.remove();
-                        } else {
-                            // Создаем контейнер для новых кнопок
-                            const newButtonsContainer = document.createElement('div');
-                            newButtonsContainer.id = newButtonsContainerId;
-                            newButtonsContainer.innerHTML = `
+            if (newButtonsContainer) {
+              // Если контейнер с кнопками уже существует, удаляем его
+              newButtonsContainer.remove();
+            } else {
+              // Создаем контейнер для новых кнопок
+              const newButtonsContainer = document.createElement('div');
+              newButtonsContainer.id = newButtonsContainerId;
+              newButtonsContainer.innerHTML = `
             <button id="newButton1" class="sidebar-button">Селектор тегу</button>
             <button id="newButton2" class="sidebar-button">Селектор класу</button>
             <button id="newButton3" class="sidebar-button">Селектор ідентифікатор</button>
             <button id="newButton4" class="sidebar-button">Інші селектори</button>
         `;
 
-                            // Найдем элемент кнопки "Самостійна робота №2"
-                            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
+              // Найдем элемент кнопки "Самостійна робота №2"
+              const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
 
-                            // Вставим новые кнопки после кнопки "Самостійна робота №2"
-                            sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+              // Вставим новые кнопки после кнопки "Самостійна робота №2"
+              sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
 
-                            // Добавим обработчики для новых кнопок
-                            document.getElementById('newButton1').onclick = function () {
-                                const selectors = [
-                                    'body',
-                                    'html',
-                                    'header',
-                                    'header nav ul',
-                                    'header nav ul li a',
-                                    '.hero',
-                                    '.services',
-                                    '.service',
-                                    '.service a',
-                                    '.ul',
-                                    '.table-section table',
-                                    '.table-section th',
-                                    '.table-section td',
-                                    '.contact-form form',
-                                    '.contact-form input',
-                                    '.contact-form textarea',
-                                    '.contact-form button',
-                                    '#footer',
-                                    '#main-header'
-                                ];
-                                showText('<b>Селектори тегів:</b><br>' + selectors.join('<br>'));
-                            };
+              // Добавим обработчики для новых кнопок
+              document.getElementById('newButton1').onclick = function () {
+                const selectors = [
+                  'body',
+                  'html',
+                  'header',
+                  'header nav ul',
+                  'header nav ul li a',
+                  '.hero',
+                  '.services',
+                  '.service',
+                  '.service a',
+                  '.ul',
+                  '.table-section table',
+                  '.table-section th',
+                  '.table-section td',
+                  '.contact-form form',
+                  '.contact-form input',
+                  '.contact-form textarea',
+                  '.contact-form button',
+                  '#footer',
+                  '#main-header'
+                ];
+                showText('<b>Селектори тегів:</b><br>' + selectors.join('<br>'));
+              };
 
-                            document.getElementById('newButton2').onclick = function () {
-                                const selectors = [
-                                    '.hero',
-                                    '.services',
-                                    '.service',
-                                    '.ul',
-                                    '.table-section',
-                                    '.table-section th',
-                                    '.table-section td',
-                                    '.contact-form',
-                                    '.contact-form form',
-                                    '.contact-form input',
-                                    '.contact-form textarea',
-                                    '.contact-form button'
-                                ];
-                                showText('<b>Селектори класів:</b><br>' + selectors.join('<br>'));
-                            };
-                            document.getElementById('newButton3').onclick = function () {
-                                showText('<b>Селекори ідентифікатори: </b><br> #footer, #main-header3');
-                            };
-                            document.getElementById('newButton4').onclick = function () {
-                                showText(' <b> Універсальний селектор  : </b><br>* { box-sizing: border-box;  } <br><b> Дочірній селектор:</b><br> header > nav { margin-top: 10px;  }<br><b> Сусідній селектор:</b><br> header nav ul li + li { margin-left: 10px;  }');
-                            };
-                        }
-                    };
-                    sidebarButtonHTMLCodeForm.onclick = function () {
-                        const newButtonsContainerId = 'newButtonsContainer';
-                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
+              document.getElementById('newButton2').onclick = function () {
+                const selectors = [
+                  '.hero',
+                  '.services',
+                  '.service',
+                  '.ul',
+                  '.table-section',
+                  '.table-section th',
+                  '.table-section td',
+                  '.contact-form',
+                  '.contact-form form',
+                  '.contact-form input',
+                  '.contact-form textarea',
+                  '.contact-form button'
+                ];
+                showText('<b>Селектори класів:</b><br>' + selectors.join('<br>'));
+              };
+              document.getElementById('newButton3').onclick = function () {
+                showText('<b>Селекори ідентифікатори: </b><br> #footer, #main-header3');
+              };
+              document.getElementById('newButton4').onclick = function () {
+                showText(' <b> Універсальний селектор  : </b><br>* { box-sizing: border-box;  } <br><b> Дочірній селектор:</b><br> header > nav { margin-top: 10px;  }<br><b> Сусідній селектор:</b><br> header nav ul li + li { margin-left: 10px;  }');
+              };
+            }
+          };
+          sidebarButtonHTMLCodeForm.onclick = function () {
+            const newButtonsContainerId = 'newButtonsContainer';
+            const newButtonsContainer = document.getElementById(newButtonsContainerId);
 
-                        if (newButtonsContainer) {
-                            // Если контейнер с кнопками уже существует, удаляем его
-                            newButtonsContainer.remove();
-                        } else {
-                            // Создаем контейнер для новых кнопок
-                            const newButtonsContainer = document.createElement('div');
-                            newButtonsContainer.id = newButtonsContainerId;
-                            newButtonsContainer.innerHTML = `
+            if (newButtonsContainer) {
+              // Если контейнер с кнопками уже существует, удаляем его
+              newButtonsContainer.remove();
+            } else {
+              // Создаем контейнер для новых кнопок
+              const newButtonsContainer = document.createElement('div');
+              newButtonsContainer.id = newButtonsContainerId;
+              newButtonsContainer.innerHTML = `
             <button id="newButton4" class="sidebar-button"> Шрифт. Google fonts</button>
             <button id="newButton5" class="sidebar-button">Css таблиці. Фон. Списки </button>
             <button id="newButton6" class="sidebar-button">Css просунутий</button>
  
         `;
 
-                            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeForm');
+              const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeForm');
 
-                            sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+              sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
 
-                            document.getElementById('newButton4').onclick = function () {
-                                const cssCode = `
+              document.getElementById('newButton4').onclick = function () {
+                const cssCode = `
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -375,49 +375,49 @@ body {
   background-size: cover;
 }`;
 
-                                // Экранирование для отображения как текста
-                                const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+                // Экранирование для отображения как текста
+                const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 
-                                showText(
-                                    '<b>html file:</b><br>' +
-                                    '&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>' +
-                                    '<b>styles.css:</b> <br>' +
-                                    escapedCSS
-                                );
-                            };
+                showText(
+                  '<b>html file:</b><br>' +
+                  '&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>' +
+                  '<b>styles.css:</b> <br>' +
+                  escapedCSS
+                );
+              };
 
 
-                            document.getElementById('newButton5').onclick = function () {
-                                const selectors = {
-                                    'Таблиці': [
-                                        '.table-section',
-                                        '.table-section th',
-                                        '.table-section td'
-                                    ],
-                                    'Списки': [
-                                        'header nav ul',
-                                        'left-menu ul',
-                                        'left-menu ul li',
-                                        'additional-info ul',
-                                        'additional-info ol'
-                                    ],
-                                    'Фон': [
-                                        'body',
-                                        '.hero',
-                                        '.service',
-                                        '.additional-info',
-                                        '.table-section',
-                                        '#footer'
-                                    ]
-                                };
+              document.getElementById('newButton5').onclick = function () {
+                const selectors = {
+                  'Таблиці': [
+                    '.table-section',
+                    '.table-section th',
+                    '.table-section td'
+                  ],
+                  'Списки': [
+                    'header nav ul',
+                    'left-menu ul',
+                    'left-menu ul li',
+                    'additional-info ul',
+                    'additional-info ol'
+                  ],
+                  'Фон': [
+                    'body',
+                    '.hero',
+                    '.service',
+                    '.additional-info',
+                    '.table-section',
+                    '#footer'
+                  ]
+                };
 
-                                let result = '<b>Селектори:</b><br>';
-                                for (const category in selectors) {
-                                    result += `<b>${category}:</b><br>${selectors[category].join('<br>')}<br><br>`;
-                                }
+                let result = '<b>Селектори:</b><br>';
+                for (const category in selectors) {
+                  result += `<b>${category}:</b><br>${selectors[category].join('<br>')}<br><br>`;
+                }
 
-                                result += '<b>CSS-код:</b><br><pre><code>' +
-                                    `/* Стили для таблиц */
+                result += '<b>CSS-код:</b><br><pre><code>' +
+                  `/* Стили для таблиц */
 .table-section table {
   width: 100%;
   border-collapse: collapse;
@@ -473,13 +473,13 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }` + '</code></pre>';
 
-                                showText(result);
-                            };
+                showText(result);
+              };
 
 
 
-                            document.getElementById('newButton6').onclick = function () {
-                                const cssCode = `
+              document.getElementById('newButton6').onclick = function () {
+                const cssCode = `
 /* Анімація появи */
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -494,61 +494,61 @@ body {
   background: rgba(0, 0, 0, 0.1); /* Легкий фон для наочності закруглених кутів */
 }`;
 
-                                // Екранування для відображення як тексту
-                                const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
+                // Екранування для відображення як тексту
+                const escapedCSS = cssCode.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 
-                                showText('<b>CSS-код:</b><br>' + escapedCSS); // Відображаємо екранований CSS
-                            };
+                showText('<b>CSS-код:</b><br>' + escapedCSS); // Відображаємо екранований CSS
+              };
 
 
-                        }
-                        const htmlCodePictButton = document.getElementById('sidebarButtonHTMLCodePict');
-                        htmlCodePictButton.style.display = 'none';
-                        sidebarButton.innerText = 'Тема, мета ЛР-1.2 , місце розташування сайту, звіту';
-                    };
-                    break;
-                case 3:
-                    content.innerHTML = `
+            }
+            const htmlCodePictButton = document.getElementById('sidebarButtonHTMLCodePict');
+            htmlCodePictButton.style.display = 'none';
+            sidebarButton.innerText = 'Тема, мета ЛР-1.2 , місце розташування сайту, звіту';
+          };
+          break;
+        case 3:
+          content.innerHTML = `
                         <h3>Лабораторна робота  </h3>
                         
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР 2-1';
-                    sidebarButtonConclusion.onclick = function () {
-                        showText('<b>Висновки до ЛР-2.1:</b><br><b>Переваги створення веб-додатків за допомогою таблиць:</b><br>1. Легкість у створенні структурованих даних, особливо при роботі з великими обсягами інформації.<br>2. Простота в організації та поданні даних, що зручно для відображення великих масивів інформації.<br>3. Легко підтримувати та редагувати таблиці через CSS або JavaScript.<br><b>Недоліки:</b><br>1. Труднощі з адаптацією до різних пристроїв (не завжди зручні на малих екранах).<br>2. Може бути важко організувати комплексні взаємодії або динамічні елементи в таблицях.<br><b>Переваги створення веб-додатків за допомогою блоків:</b><br>1. Гнучкість у побудові інтерфейсу, можливість створення адаптивних та привабливих дизайнів.<br>2. Блоки дозволяють легше управляти вмістом на сторінці за допомогою позиціонування та зручного управління через CSS.<br>3. Можна реалізувати плавні анімації та ефекти з використанням плаваючих блоків.<br><b>Недоліки:</b><br>1. При неправильному використанні блоки можуть призвести до проблем з макетом і сумісністю з різними браузерами.<br>2. Може бути складно для реалізації складних таблиць або списків з використанням тільки блоків.');
-                    };
-                    sidebarButton.onclick = function () {
-                        showText('<b>Тема:</b> ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.<br><p><b>Мета:</b><br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.<br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX.</p> <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>');
-                    };
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР 2-1';
+          sidebarButtonConclusion.onclick = function () {
+            showText('<b>Висновки до ЛР-2.1:</b><br><b>Переваги створення веб-додатків за допомогою таблиць:</b><br>1. Легкість у створенні структурованих даних, особливо при роботі з великими обсягами інформації.<br>2. Простота в організації та поданні даних, що зручно для відображення великих масивів інформації.<br>3. Легко підтримувати та редагувати таблиці через CSS або JavaScript.<br><b>Недоліки:</b><br>1. Труднощі з адаптацією до різних пристроїв (не завжди зручні на малих екранах).<br>2. Може бути важко організувати комплексні взаємодії або динамічні елементи в таблицях.<br><b>Переваги створення веб-додатків за допомогою блоків:</b><br>1. Гнучкість у побудові інтерфейсу, можливість створення адаптивних та привабливих дизайнів.<br>2. Блоки дозволяють легше управляти вмістом на сторінці за допомогою позиціонування та зручного управління через CSS.<br>3. Можна реалізувати плавні анімації та ефекти з використанням плаваючих блоків.<br><b>Недоліки:</b><br>1. При неправильному використанні блоки можуть призвести до проблем з макетом і сумісністю з різними браузерами.<br>2. Може бути складно для реалізації складних таблиць або списків з використанням тільки блоків.');
+          };
+          sidebarButton.onclick = function () {
+            showText('<b>Тема:</b> ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.<br><p><b>Мета:</b><br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.<br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX.</p> <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>');
+          };
 
-                    sidebarButtonDescription.onclick = function () {
-                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
-                    };
-                    sidebarButton.innerText = 'Тема, мета ЛР 2-1 , місце розташування сайту, звіту';
-                    sidebarButtonStructure.innerText = 'Завдання 1. Зовнішній вигляд макету. Код макету.';
-                    sidebarButtonHTMLCodeTables.innerText = 'Завдання №2';
-                    sidebarButtonHTMLCodeForm.innerText = 'Завдання №3 Flexbox';
-                    sidebarButtonHTMLCodePict.style.display = "none";
-                    sidebarButtonHTMLCodeTables.onclick = function () {
-                        const newButtonsContainerId = 'newButtonsContainers';
-                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+          };
+          sidebarButton.innerText = 'Тема, мета ЛР 2-1 , місце розташування сайту, звіту';
+          sidebarButtonStructure.innerText = 'Завдання 1. Зовнішній вигляд макету. Код макету.';
+          sidebarButtonHTMLCodeTables.innerText = 'Завдання №2';
+          sidebarButtonHTMLCodeForm.innerText = 'Завдання №3 Flexbox';
+          sidebarButtonHTMLCodePict.style.display = "none";
+          sidebarButtonHTMLCodeTables.onclick = function () {
+            const newButtonsContainerId = 'newButtonsContainers';
+            const newButtonsContainer = document.getElementById(newButtonsContainerId);
 
-                        if (newButtonsContainer) {
-                            // If the container with buttons already exists, remove it
-                            newButtonsContainer.remove();
-                        } else {
-                            // Create a new container for the buttons
-                            const newButtonsContainer = document.createElement('div');
-                            newButtonsContainer.id = newButtonsContainerId;
-                            newButtonsContainer.innerHTML = `
+            if (newButtonsContainer) {
+              // If the container with buttons already exists, remove it
+              newButtonsContainer.remove();
+            } else {
+              // Create a new container for the buttons
+              const newButtonsContainer = document.createElement('div');
+              newButtonsContainer.id = newButtonsContainerId;
+              newButtonsContainer.innerHTML = `
             <button id="newButton4" class="sidebar-button">  Гумова таблична верстка</button>
             <button id="newButton5" class="sidebar-button">Гумова блокова верстка </button>     `;
-                            const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
+              const sidebarButtonHTMLCodeTablesElement = document.getElementById('sidebarButtonHTMLCodeTables');
 
-                            sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
-                        }
-                        // Когда кнопка с ID 'newButton5' нажата, выполняется этот код
-                        document.getElementById('newButton5').onclick = function () {
-                            content.innerHTML = `
+              sidebarButtonHTMLCodeTablesElement.insertAdjacentElement('afterend', newButtonsContainer);
+            }
+            // Когда кнопка с ID 'newButton5' нажата, выполняется этот код
+            document.getElementById('newButton5').onclick = function () {
+              content.innerHTML = `
         <h3>Гумова блокова верстка</h3>  
         <pre><code>
             Секція Key Features (#features):  
@@ -583,9 +583,9 @@ body {
     height: 400px;            
   }     </code></pre>
     `;
-                        };
-                        document.getElementById('newButton4').onclick = function () {
-                            content.innerHTML = `<h3>Гумова таблична верстка</h3>  
+            };
+            document.getElementById('newButton4').onclick = function () {
+              content.innerHTML = `<h3>Гумова таблична верстка</h3>  
     <pre>
     &lt;section id="flexible-table-section" style="background-color: #f9f9f9; padding: 40px;"&gt;
         &lt;h2 style="text-align: center;"&gt;Flexible Table Layout&lt;/h2&gt;
@@ -617,36 +617,36 @@ body {
         &lt;/div&gt;
     &lt;/section&gt;
     </pre>`;
-                        };
-                    };
-                    sidebarButtonHTMLCodeForm.onclick = function () {
-                        const newButtonsContainerId = 'newButtonsContainers';
-                        const newButtonsContainer = document.getElementById(newButtonsContainerId);
+            };
+          };
+          sidebarButtonHTMLCodeForm.onclick = function () {
+            const newButtonsContainerId = 'newButtonsContainers';
+            const newButtonsContainer = document.getElementById(newButtonsContainerId);
 
-                        if (newButtonsContainer) {
-                            // If the container with buttons already exists, remove it
-                            newButtonsContainer.remove();
-                        } else {
-                            // Create a new container for the buttons
-                            const newButtons1Container = document.createElement('div');
-                            newButtons1Container.id = newButtonsContainerId;
-                            newButtons1Container.innerHTML = `
+            if (newButtonsContainer) {
+              // If the container with buttons already exists, remove it
+              newButtonsContainer.remove();
+            } else {
+              // Create a new container for the buttons
+              const newButtons1Container = document.createElement('div');
+              newButtons1Container.id = newButtonsContainerId;
+              newButtons1Container.innerHTML = `
             <button id="newOlgasButton4" class="sidebar-button">  Скрішот  сторінки(FLEXBOX)</button>
             <button id="newOlgasButton5" class="sidebar-button">HTML-код FLEXBOX </button>   
             <button id="newButton6" class="sidebar-button">CSS-код FLEXBOX </button>    
             `;
-                            const sidebarButtonHTMLCodeTablesElement1 = document.getElementById('sidebarButtonHTMLCodeForm');
+              const sidebarButtonHTMLCodeTablesElement1 = document.getElementById('sidebarButtonHTMLCodeForm');
 
-                            sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons1Container);
-                        }
-                        document.getElementById('newOlgasButton4').onclick = function () {
+              sidebarButtonHTMLCodeTablesElement1.insertAdjacentElement('afterend', newButtons1Container);
+            }
+            document.getElementById('newOlgasButton4').onclick = function () {
 
-                            content.innerHTML = `  <img src= "images/maket-1.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
+              content.innerHTML = `  <img src= "images/maket-1.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
            <img src= "images/maket-2.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
         `;
-                        };
-                        document.getElementById('newButton6').onclick = function () {
-                            content.innerHTML = ` Стилі проекту:
+            };
+            document.getElementById('newButton6').onclick = function () {
+              content.innerHTML = ` Стилі проекту:
 <pre style="white-space: pre-wrap; font-family: monospace; line-height: 1.5;">
 * {
     margin: 0;
@@ -816,12 +816,12 @@ header nav ul li a {
 }
 </pre>
     `;
-                        };
+            };
 
 
-                        document.getElementById('newOlgasButton5').onclick = function () {
+            document.getElementById('newOlgasButton5').onclick = function () {
 
-                            content.innerHTML = `  <p> HTML код проекту:</p>
+              content.innerHTML = `  <p> HTML код проекту:</p>
            <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -943,10 +943,10 @@ header nav ul li a {
   &lt;footer id="footer-2"&gt;
     &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
     `;
-                        };
+            };
 
-                        sidebarButtonStructure.onclick = function () {
-                            content.innerHTML = `
+            sidebarButtonStructure.onclick = function () {
+              content.innerHTML = `
         <h3>Завдання 1: Зовнішній вигляд макету</h3>
         <p>Макет проекту:</p>
         <img src= "images/maket-1.jpg" alt="Макет проекту" style="width:100%; max-width:800px;">
@@ -1073,30 +1073,30 @@ header nav ul li a {
   &lt;footer id="footer-2"&gt;
     &lt;p&gt;&amp;copy; 2024 AI Partnerio. All rights reserved.&lt;/p
     `;
-                        };
-                    };
-                    break;
-                case 4:
-                    content.innerHTML = `
+            };
+          };
+          break;
+        case 4:
+          content.innerHTML = `
                         <h3>Лабораторна робота 2.2</h3>
                         
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p> `;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.2'; 
-                    sidebarButtonConclusion.onclick = function () {
-                        showText('<b>Висновки до ЛР-2.2:</b><br>  Лабораторна робота дозволила на практиці закріпити знання та навички з адаптивної верстки, медіа-запитів та мета-тега viewport. В результаті вдалося створити веб-сторінку, що коректно відображається на різних пристроях, і застосувати принципи Mobile First для досягнення найкращої продуктивності та користувацького досвіду.');
-                    };
-                    sidebarButton.innerText = 'Тема, мета ЛР-2.2, місце розташування сайту, звіту';
-                    sidebarButtonStructure.innerText = 'Медіа -запити ';
-                    sidebarButtonHTMLCodeTables.innerText = 'Мобайл версія ';
-                    sidebarButtonHTMLCodeForm.innerText = 'Десктоп версія';
-                    sidebarButtonHTMLCodePict.innerText = "Планшет версія";
-                    sidebarButtonDescription.onclick = function () {
-                        showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
-                    };
-                    sidebarButton.onclick = function () {
-                        showText('<b>Тема:</b> АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT.<br><p><b>Мета:</b> Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції. Метатег viewport. Інструменти розробника. Стратегія Mobile First.</p> <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>');
-                        sidebarButtonStructure.onclick = function () {
-                            content.innerHTML = `
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-2.2';
+          sidebarButtonConclusion.onclick = function () {
+            showText('<b>Висновки до ЛР-2.2:</b><br>  Лабораторна робота дозволила на практиці закріпити знання та навички з адаптивної верстки, медіа-запитів та мета-тега viewport. В результаті вдалося створити веб-сторінку, що коректно відображається на різних пристроях, і застосувати принципи Mobile First для досягнення найкращої продуктивності та користувацького досвіду.');
+          };
+          sidebarButton.innerText = 'Тема, мета ЛР-2.2, місце розташування сайту, звіту';
+          sidebarButtonStructure.innerText = 'Медіа -запити ';
+          sidebarButtonHTMLCodeTables.innerText = 'Мобайл версія ';
+          sidebarButtonHTMLCodeForm.innerText = 'Десктоп версія';
+          sidebarButtonHTMLCodePict.innerText = "Планшет версія";
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+          };
+          sidebarButton.onclick = function () {
+            showText('<b>Тема:</b> АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT.<br><p><b>Мета:</b> Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції. Метатег viewport. Інструменти розробника. Стратегія Mobile First.</p> <br> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на звіт </a>');
+            sidebarButtonStructure.onclick = function () {
+              content.innerHTML = `
     <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
 /* Мобильний режим */
 @media (max-width: 768px) {
@@ -1200,9 +1200,9 @@ header nav ul li a {
 }
 </pre>
     `;
-                        };
-                        sidebarButtonHTMLCodeTables.onclick = function () {
-                            content.innerHTML = `
+            };
+            sidebarButtonHTMLCodeTables.onclick = function () {
+              content.innerHTML = `
     <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
 /* Мобильний режим */
 @media (max-width: 768px) {
@@ -1227,10 +1227,10 @@ header nav ul li a {
 }
     </pre>
     `;
-                        };
+            };
 
-                        sidebarButtonHTMLCodeForm.onclick = function () {
-                            content.innerHTML = `
+            sidebarButtonHTMLCodeForm.onclick = function () {
+              content.innerHTML = `
     <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
 /* Стилі для десктопа   */
 @media (min-width: 1024px) {
@@ -1286,10 +1286,10 @@ header nav ul li a {
 }
     </pre>
     `;
-                        }
+            }
 
-                        sidebarButtonHTMLCodePict.onclick = function () {
-                            content.innerHTML = `
+            sidebarButtonHTMLCodePict.onclick = function () {
+              content.innerHTML = `
     <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: monospace; line-height: 1.5; padding: 20px; background-color: #f4f4f4; border-radius: 5px;">
 /* Стилі для планшету   */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1318,59 +1318,89 @@ header nav ul li a {
 }
 </pre>
     `;
-                        }; 
-                    };
+            };
+          };
 
-                    break;
-                case 5:
-                    content.innerHTML = `
+          break;
+        case 5:
+          content.innerHTML = `
                         <h3>Лабораторна робота 3.1</h3>
                    
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок </a></p>`;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-3.1';
-                 //  sidebarButtonDescription.style.display = "none";
-                    sidebarButton.innerText='Завдання- 1';
-                    sidebarButtonDescription.onclick = function () {
-                        showText('<b>Тема, мета ЛР-3.1, місце розташування сайту, звіту:</b><br><b>Тема:</b> ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. <br>ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ <br> ЗАСОВАМИ МОВИ JAVASCRIPT <br><b> Мета:</b> придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях. Реалізація програм засовами мови JAVASCRIPT  <br><p> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на  звіт  </a></p><br><b>Посилання на реопзиторій звіту: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appRECORD_KornievaOlga  /">Посилання на  репозиторій звіту </a><br><b>Посилання на реопзиторій веб застосунку: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appWEB_KornievaOlga   /">Посилання на  репозиторій веб застосунку </a></p>'  );};
-                    sidebarButtonStructure.innerText='Завдання- 2';
-                    sidebarButtonHTMLCodeTables.innerText='Завдання-3';
-                    sidebarButtonHTMLCodeForm.innerText='Завдання- 4';
-                    sidebarButtonHTMLCodePict.innerText='Завдання- 5';
-                    sidebarButtonDescription.innerText='Тема, мета ЛР-3.1, місце розташування сайту, звіту';
-                    break;
-                case 6:
-                    content.innerHTML = `
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-3.1';
+          //  sidebarButtonDescription.style.display = "none";
+          sidebarButton.innerText = 'Завдання- 1';
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Тема, мета ЛР-3.1, місце розташування сайту, звіту:</b><br><b>Тема:</b> ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. <br>ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ <br> ЗАСОВАМИ МОВИ JAVASCRIPT <br><b> Мета:</b> придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях. Реалізація програм засовами мови JAVASCRIPT  <br><p> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на  звіт  </a></p><br><b>Посилання на реопзиторій звіту: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appRECORD_KornievaOlga  /">Посилання на  репозиторій звіту </a><br><b>Посилання на реопзиторій веб застосунку: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appWEB_KornievaOlga   /">Посилання на  репозиторій веб застосунку </a></p>');
+          };
+          sidebarButtonStructure.innerText = 'Завдання- 2';
+          sidebarButtonHTMLCodeTables.innerText = 'Завдання-3';
+          sidebarButtonHTMLCodeForm.innerText = 'Завдання- 4';
+          sidebarButtonHTMLCodePict.innerText = 'Завдання- 5';
+          sidebarButtonDescription.innerText = 'Тема, мета ЛР-3.1, місце розташування сайту, звіту';
+          document.getElementById('sidebarButton').onclick = function () {
+
+            sidebarButton.onclick = function () {
+              content.innerHTML = `
+        <img src="images/new_exp.png" alt="виконання задачі -1 " style="width:100%; max-width:800px;">
+       <pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Shipping Message&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;script&gt;
+        function getShippingMessage(country, price, deliveryFee) {
+            const totalPrice = price + deliveryFee;
+             return \`Shipping to \${country} will cost \${totalPrice} credits\`;
+        } <br>
+        &lt;/script&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>`;
+            };
+          }
+
+
+          break;
+        case 6:
+          content.innerHTML = `
                         <h3>Лабораторна робота 3.2</h3>
     
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб -застосунок</a></p>`;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-3.2';
-                    sidebarButton.innerText = 'Тема, мета ЛР-3.2, місце розташування сайту, звіту';
-                    break;
-                case 7:
-                    content.innerHTML = `
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-3.2';
+          sidebarButton.innerText = 'Тема, мета ЛР-3.2, місце розташування сайту, звіту';
+          break;
+        case 7:
+          content.innerHTML = `
                         <h3>Лабораторна робота 4.1</h3>
                          
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4.1</a></p>`;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.1';
-                    sidebarButton.innerText = 'Тема, мета ЛР-4.1, місце розташування сайту, звіту';
-                    break;
-                case 8:
-                    content.innerHTML = `
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.1';
+          sidebarButton.innerText = 'Тема, мета ЛР-4.1, місце розташування сайту, звіту';
+          break;
+        case 8:
+          content.innerHTML = `
                         <h3>Лабораторна робота 4.2</h3>
                         
                         <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4.2</а></п>`;
-                    sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.2';
-                    sidebarButton.innerText = 'Тема, мета ЛР-4.2, місце розташування сайту, звіту';
-                    break;
-            }
-        }
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.2';
+          sidebarButton.innerText = 'Тема, мета ЛР-4.2, місце розташування сайту, звіту';
+          break;
+      }
+    }
 
-        function showText(text) {
-            const content = document.querySelector('.main-content');
-            content.innerHTML = `<p>${text}</p>`;
-        }
+    function showText(text) {
+      const content = document.querySelector('.main-content');
+      content.innerHTML = `<p>${text}</p>`;
+    }
 
-    </script>
+  </script>
 </body>
 
 </html>
