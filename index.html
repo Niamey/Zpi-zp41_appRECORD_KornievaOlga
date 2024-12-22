@@ -1364,9 +1364,9 @@ header nav ul li a {
         &lt;/html&gt;
         </code></pre>`;
             };
- 
-         sidebarButtonStructure.onclick = function () {
-    content.innerHTML = `
+
+            sidebarButtonStructure.onclick = function () {
+              content.innerHTML = `
         <img src="images/new_exp-1.png" alt="виконання задачі -2 " style="width:100%; max-width:800px;"> <br>
         &lt;!DOCTYPE html&gt;<br>
         &lt;html lang=&quot;en&quot;&gt;<br>
@@ -1396,9 +1396,9 @@ header nav ul li a {
 
         &lt;/body&gt;<br>
         &lt;/html&gt;`;
-};
-sidebarButtonHTMLCodeTables.onclick = function () {
-    content.innerHTML = `
+            };
+            sidebarButtonHTMLCodeTables.onclick = function () {
+              content.innerHTML = `
         <img src="images/new_exp-2.png" alt="виконання задачі -3 " style="width:100%; max-width:800px;"> <br>
         
         &lt;!DOCTYPE html&gt;<br>
@@ -1439,7 +1439,132 @@ sidebarButtonHTMLCodeTables.onclick = function () {
 
         &lt;/body&gt;<br>
         &lt;/html&gt;`;
-};
+            };
+
+            sidebarButtonHTMLCodeForm.onclick = function () {
+              content.innerHTML = `
+        <img src="images/new_exp-3.png" alt="виконання задачі -3 " style="width:100%; max-width:800px;"> <br>
+        <img src="images/new_exp-4.png" alt="виконання задачі -3 " style="width:100%; max-width:800px;"> <br>
+        <img src="images/new_exp-5.png" alt="виконання задачі -3 " style="width:100%; max-width:800px;"> <br>
+
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang=&quot;en&quot;&gt;<br>
+        &lt;head&gt;<br>
+            &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+            &lt;title&gt;Array Tasks&lt;/title&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+
+        &lt;script&gt;<br>
+        function getShippingMessage(country, price, deliveryFee) {<br>
+            const totalPrice = price + deliveryFee;<br>
+            return \`Shipping to \${country} will cost \${totalPrice} credits\`;<br>
+        }<br>
+
+        function makeTransaction(quantity, pricePerDroid, customerCredits) {<br>
+            const totalPrice = quantity * pricePerDroid;<br>
+
+            if (totalPrice > customerCredits) {<br>
+                return "Insufficient funds!";<br>
+            } else {<br>
+                return \`You ordered \${quantity} droids worth \${totalPrice} credits!\`;<br>
+            }<br>
+        }<br>
+
+        function makeArray(firstArray, secondArray, maxLength) {<br>
+            const newArray = firstArray.concat(secondArray);<br>
+
+            if (newArray.length > maxLength) {<br>
+                return newArray.slice(0, maxLength);<br>
+            } else {<br>
+                return newArray;<br>
+            }<br>
+        }<br>
+
+        // Task 1: Create array C based on arrays A and B<br>
+        function createArrayC(arrayA, arrayB) {<br>
+            const arrayC = [];<br>
+            
+            for (let i = 0; i < arrayA.length; i++) {<br>
+                if (arrayA[i] === arrayB[i]) {<br>
+                    arrayC[i] = 1;<br>
+                } else {<br>
+                    arrayC[i] = 1 / (arrayA[i] - arrayB[i]);<br>
+                }<br>
+            }<br>
+            
+            // Find max element and its index<br>
+            let maxIndex = 0;<br>
+            for (let i = 1; i < arrayC.length; i++) {<br>
+                if (arrayC[i] > arrayC[maxIndex]) {<br>
+                    maxIndex = i;<br>
+                }<br>
+            }<br>
+            
+            // Swap max element with first element<br>
+            if (maxIndex !== 0) {<br>
+                const temp = arrayC[0];<br>
+                arrayC[0] = arrayC[maxIndex];<br>
+                arrayC[maxIndex] = temp;<br>
+            }<br>
+            
+            return arrayC;<br>
+        }<br>
+
+        // Task 2: Bubble sort implementation<br>
+        function bubbleSort(arr) {<br>
+            const n = arr.length;<br>
+            let sorted = false;<br>
+            
+            while (!sorted) {<br>
+                sorted = true;<br>
+                for (let i = 0; i < n - 1; i++) {<br>
+                    if (arr[i] > arr[i + 1]) {<br>
+                        // Swap elements<br>
+                        const temp = arr[i];<br>
+                        arr[i] = arr[i + 1];<br>
+                        arr[i + 1] = temp;<br>
+                        sorted = false;<br>
+                    }<br>
+                }<br>
+            }<br>
+            return arr;<br>
+        }<br>
+
+        // Test functions<br>
+        function testArrayTasks() {<br>
+            // Test data<br>
+            const arrayA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+            const arrayB = [2, 4, 3, 2, 5, 6, 7, 8, 9, 1];<br>
+            
+            console.log("Initial arrays:");<br>
+            console.log("Array A:", arrayA);<br>
+            console.log("Array B:", arrayB);<br>
+            
+            // Task 1<br>
+            const arrayC = createArrayC(arrayA, arrayB);<br>
+            console.log("\nArray C (after creation and max element swap):");<br>
+            console.log(arrayC);<br>
+            
+            // Task 2<br>
+            const arrayToSort = [...arrayC]; // Create a copy for sorting<br>
+            console.log("\nBubble Sort:");<br>
+            console.log("Before sorting:", arrayToSort);<br>
+            const sortedArray = bubbleSort(arrayToSort);<br>
+            console.log("After sorting:", sortedArray);<br>
+        }<br>
+
+        // Run tests when the page loads<br>
+        window.onload = testArrayTasks;<br>
+        &lt;/script&gt;<br>
+
+        &lt;/body&gt;<br>
+        &lt;/html&gt;`;
+            };
+
+
+
           };
 
           break;
