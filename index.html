@@ -1331,7 +1331,7 @@ header nav ul li a {
           //  sidebarButtonDescription.style.display = "none";
           sidebarButton.innerText = 'Завдання- 1';
           sidebarButtonDescription.onclick = function () {
-            showText('<b>Тема, мета ЛР-3.1, місце розташування сайту, звіту:</b><br><b>Тема:</b> ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. <br>ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ <br> ЗАСОВАМИ МОВИ JAVASCRIPT <br><b> Мета:</b> придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях. Реалізація програм засовами мови JAVASCRIPT  <br><p> <b>Посилання на сайт: </b> <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на  звіт  </a></p><br><b>Посилання на реопзиторій звіту: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appRECORD_KornievaOlga  /">Посилання на  репозиторій звіту </a><br><b>Посилання на реопзиторій веб застосунку: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appWEB_KornievaOlga   /">Посилання на  репозиторій веб застосунку </a></p>');
+            showText('<b>Тема, мета ЛР-3.1, місце розташування сайту, звіту:</b><br><b>Тема:</b> ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. <br>ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ <br> ЗАСОВАМИ МОВИ JAVASCRIPT <br><b> Мета:</b> придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях. Реалізація програм засовами мови JAVASCRIPT  <br><p> <b>Посилання на сайт: </b> <a href=" https://niamey.github.io/zpi-zp41_appINDEPENDENT_KornievaOlga/ ">Посилання на веб-застосунок</a> <br> <b>Посилання на звіт: </b> <a href="https://niamey.github.io/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на  звіт  </a></p><br><b>Посилання на реопзиторій звіту: </b>  <a href="  https://github.com/Niamey/Zpi-zp41_appRECORD_KornievaOlga/">Посилання на  репозиторій звіту </a><br><b>Посилання на реопзиторій веб застосунку: </b>  <a href="  https://github.com/Niamey/zpi-zp41_appINDEPENDENT_KornievaOlga/ ">Посилання на  репозиторій веб застосунку </a></p>');
           };
           sidebarButtonStructure.innerText = 'Завдання- 2';
           sidebarButtonHTMLCodeTables.innerText = 'Завдання-3';
@@ -1562,11 +1562,155 @@ header nav ul li a {
         &lt;/body&gt;<br>
         &lt;/html&gt;`;
             };
-
-
+            sidebarButtonHTMLCodePict.onclick = function () {
+              content.innerHTML = `
+        <img src="images/new_exp-6.png" alt="виконання задачі -3 " style="width:100%; max-width:800px;"> <br>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang="en"&gt;<br>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+        &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+        &nbsp;&nbsp;&lt;title&gt;Array Tasks and Text Editor&lt;/title&gt;<br>
+        &nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+        &nbsp;&nbsp;&lt;!-- Text Editor Interface --&gt;<br>
+        &nbsp;&nbsp;&lt;div class="editor-container"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="toolbar"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="formatText('bold')" title="Bold"&gt;&lt;strong&gt;B&lt;/strong&gt;&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="formatText('italic')" title="Italic"&gt;&lt;em&gt;I&lt;/em&gt;&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="formatText('underline')" title="Underline"&gt;&lt;u&gt;U&lt;/u&gt;&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="color" class="color-picker" onchange="changeColor(this.value)" title="Text Color"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="changeCase('upper')" title="UPPERCASE"&gt;AA&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="changeCase('lower')" title="lowercase"&gt;aa&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="editor" contenteditable="true"&gt;Enter your text here...&lt;/div&gt;<br>
+        &nbsp;&nbsp;&lt;/div&gt;<br>
+        &lt;script&gt;<br>
+        // Your existing functions<br>
+        function getShippingMessage(country, price, deliveryFee) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const totalPrice = price + deliveryFee;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return \`Shipping to \${country} will cost \${totalPrice} credits\`;<br>
+        }<br>
+        function makeTransaction(quantity, pricePerDroid, customerCredits) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const totalPrice = quantity * pricePerDroid;<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;if (totalPrice > customerCredits) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Insufficient funds!";<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return \`You ordered \${quantity} droids worth \${totalPrice} credits!\`;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        }<br>
+        function makeArray(firstArray, secondArray, maxLength) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const newArray = firstArray.concat(secondArray);<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;if (newArray.length > maxLength) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return newArray.slice(0, maxLength);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return newArray;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        }<br>
+        function createArrayC(arrayA, arrayB) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const arrayC = [];<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;for (let i = 0; i < arrayA.length; i++) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arrayA[i] === arrayB[i]) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrayC[i] = 1;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrayC[i] = 1 / (arrayA[i] - arrayB[i]);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;let maxIndex = 0;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;for (let i = 1; i < arrayC.length; i++) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arrayC[i] > arrayC[maxIndex]) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxIndex = i;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;if (maxIndex !== 0) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const temp = arrayC[0];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrayC[0] = arrayC[maxIndex];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrayC[maxIndex] = temp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return arrayC;<br>
+        }<br>
+        function bubbleSort(arr) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const n = arr.length;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;let sorted = false;<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;while (!sorted) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sorted = true;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (let i = 0; i < n - 1; i++) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arr[i] > arr[i + 1]) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const temp = arr[i];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[i] = arr[i + 1];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr[i + 1] = temp;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sorted = false;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return arr;<br>
+        }<br>
+        function testArrayTasks() {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const arrayA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const arrayB = [2, 4, 3, 2, 5, 6, 7, 8, 9, 1];<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("Initial arrays:");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("Array A:", arrayA);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("Array B:", arrayB);<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const arrayC = createArrayC(arrayA, arrayB);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("\nArray C (after creation and max element swap):");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(arrayC);<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const arrayToSort = [...arrayC];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("\nBubble Sort:");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("Before sorting:", arrayToSort);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const sortedArray = bubbleSort(arrayToSort);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log("After sorting:", sortedArray);<br>
+        }<br>
+        // Enhanced Text Editor Functions with Console Logging<br>
+        function logEditorAction(action, details = '') {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const editorContent = document.getElementById('editor').innerHTML;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(\`Text Editor Action: \${action}\`);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log(\`Details: \${details}\`);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log('Current Editor Content:', editorContent);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;console.log('----------------------------------------');<br>
+        }<br>
+        function formatText(command) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.execCommand(command, false, null);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;logEditorAction(command);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('editor').focus();<br>
+        }<br>
+        function changeColor(color) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.execCommand('foreColor', false, color);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;logEditorAction('color change', \`New color: \${color}\`);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('editor').focus();<br>
+        }<br>
+        function changeCase(command) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const editor = document.getElementById('editor');<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;const content = editor.innerText;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;if (command === 'upper') {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;editor.innerText = content.toUpperCase();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;} else if (command === 'lower') {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;editor.innerText = content.toLowerCase();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;logEditorAction('case change', \`New case: \${command}\`);<br>
+        }<br>
+        testArrayTasks();<br>
+        &lt;/script&gt;<br>
+        &lt;/body&gt;<br>
+        &lt;/html&gt;<br>
+    `;
+            };
+            sidebarButtonConclusion.onclick = function () {
+              showText('<b> Висновки до Лр 3-1:</b><br> Під час виконання цієї лабораторної роботи вдалося закріпити навички використання мови JavaScript для створення інтерактивних веб-додатків. Особливу увагу було приділено роботі з масивами, написанню функцій та реалізації їх у практичних задачах. Виконання завдань дозволило краще зрозуміти, як правильно застосовувати конструкції JavaScript для обробки даних і виконання розрахунків. Завдяки роботі з кодом і тестуванням результатів було отримано практичний досвід, який стане в нагоді для майбутніх проектів.  ');
+            };
 
           };
-
           break;
         case 6:
           content.innerHTML = `
