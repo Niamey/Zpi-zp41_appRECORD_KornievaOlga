@@ -1364,8 +1364,40 @@ header nav ul li a {
         &lt;/html&gt;
         </code></pre>`;
             };
-          }
+ 
+         sidebarButtonStructure.onclick = function () {
+    content.innerHTML = `
+        <img src="images/new_exp-1.png" alt="виконання задачі -2 " style="width:100%; max-width:800px;"> <br>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang=&quot;en&quot;&gt;<br>
+        &lt;head&gt;<br>
+            &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+            &lt;title&gt;Shipping and Droid Sales&lt;/title&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
 
+        &lt;script&gt;<br>
+        function getShippingMessage(country, price, deliveryFee) {<br>
+            const totalPrice = price + deliveryFee;<br>
+            return \`Shipping to \${country} will cost \${totalPrice} credits\`;<br>
+        }<br>
+
+        function makeTransaction(quantity, pricePerDroid, customerCredits) {<br>
+            const totalPrice = quantity * pricePerDroid;<br>
+
+            if (totalPrice > customerCredits) {<br>
+                return "Insufficient funds!";<br>
+            } else {<br>
+                return \`You ordered \${quantity} droids worth \${totalPrice} credits!\`;<br>
+            }<br>
+        }<br>
+        &lt;/script&gt;<br>
+
+        &lt;/body&gt;<br>
+        &lt;/html&gt;`;
+};
+ };
 
           break;
         case 6:
