@@ -1802,8 +1802,74 @@ header nav ul li a {
         &lt;/body&gt;<br>
         &lt;/html&gt;`;
           };
+          sidebarButtonStructure.onclick = function () {
+            content.innerHTML = `
+        <img src="images/laba-3.2-4.png" alt="Concert Image" style="margin-top: 20px; width: 100%;" />
+        <pre>&lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Concerts Functionality&lt;/title&gt;
+            &lt;script&gt;
+                // Concerts functionality
+                const concerts = {
+                    Київ: new Date("2020-04-01"),
+                    Умань: new Date("2025-07-02"),
+                    Вінниця: new Date("2020-04-21"),
+                    Одеса: new Date("2025-03-15"),
+                    Хмельницький: new Date("2020-04-18"),
+                    Харків: new Date("2025-07-10"),
+                };
 
- 
+                // Function to process concerts
+                const processConcerts = () =&gt; {
+                    const currentDate = new Date();
+
+                    // Get array of cities with future concerts and sort them
+                    const futureConcerts = Object.entries(concerts)
+                        .filter(([_, date]) => date &gt; currentDate) // Filter only future concerts
+                        .sort(([, dateA], [, dateB]) =&gt; dateA - dateB) // Sort by date
+                        .map(([city]) =&gt; city); // Get only city names
+
+                    const output = document.getElementById("output");
+                    output.innerHTML = "&lt;strong&gt;Future concerts (chronologically):&lt;/strong&gt; " + futureConcerts.join(", ");
+
+                    return futureConcerts;
+                };
+
+                // Function to test all functionality
+                const testAll = () =&gt; {
+                    console.clear();
+                    console.log("Testing All Functionality");
+                    console.log("======================");
+
+                    // Test concerts
+                    console.log("1. Processing Concerts:");
+                    const futureConcerts = processConcerts();
+                    console.log("Future concerts:", futureConcerts);
+
+                    // Additional placeholder for other tests
+                    console.log("\n2. Additional functionality can be added here.");
+                };
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Concerts Functionality&lt;/h1&gt;
+            &lt;button onclick="processConcerts()"&gt;Process Concerts&lt;/button&gt;
+            &lt;button onclick="testAll()"&gt;Test All&lt;/button&gt;
+            &lt;div id="output" style="margin-top: 20px; font-size: 1.2em;"&gt;&lt;/div&gt;
+            &lt;script&gt;
+                console.log("Available commands:");
+                console.log("processConcerts() - Process concerts data");
+                console.log("testAll() - Run all tests");
+            &lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+    `;
+          };
+
+
 
           break;
         case 7:
