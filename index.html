@@ -1927,6 +1927,67 @@ header nav ul li a {
         &lt;/html&gt;</pre>
     `;
           };
+          sidebarButtonHTMLCodeForm.onclick = function () {
+            content.innerHTML = `
+        <!-- Вставка картинки -->
+        <img src="images/laba-3.2-8.png" alt="Storage Constructor" style="margin-top: 20px; width: 100%;" />
+
+        <!-- HTML код -->
+        <pre>&lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Storage Constructor&lt;/title&gt;
+            &lt;script&gt;
+                // Storage constructor function
+                function Storage(initialItems) {
+                    this.items = initialItems;
+
+                    // Method to get items
+                    this.getItems = function () {
+                        return this.items;
+                    };
+
+                    // Method to add an item
+                    this.addItem = function (item) {
+                        this.items.push(item);
+                    };
+
+                    // Method to remove an item
+                    this.removeItem = function (item) {
+                        const index = this.items.indexOf(item);
+                        if (index !== -1) {
+                            this.items.splice(index, 1);
+                        }
+                    };
+                }
+
+                // Example usage
+                const arr = ["apple", "banana", "mango"];
+                const storage = new Storage(arr);
+
+                // Display storage operations in console
+                const testStorage = () =&gt; {
+                    console.clear();
+
+                    console.log("Initial items:", storage.getItems());
+
+                    storage.addItem("orange");
+                    console.log("After adding 'orange':", storage.getItems());
+
+                    storage.removeItem("banana");
+                    console.log("After removing 'banana':", storage.getItems());
+                };
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Storage Management&lt;/h1&gt;
+            &lt;button onclick="testStorage()"&gt;Test Storage Operations&lt;/button&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+    `;
+          };
 
 
           break;
