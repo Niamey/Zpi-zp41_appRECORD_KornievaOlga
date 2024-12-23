@@ -1988,6 +1988,69 @@ header nav ul li a {
         &lt;/html&gt;</pre>
     `;
           };
+          sidebarButtonHTMLCodePict.onclick = function () {
+            content.innerHTML = `
+        <!-- Вставка картинки -->
+        <img src="images/laba-3.2-10.png" alt="Bracket Checker" style="margin-top: 20px; width: 100%;" />
+
+        <!-- HTML код -->
+        <pre>&lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Check Brackets&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Bracket Checker&lt;/h1&gt;
+            &lt;textarea id="codeInput" rows="10" cols="50" placeholder="Введіть JavaScript код"&gt;&lt;/textarea&gt;
+            &lt;br&gt;
+            &lt;button onclick="checkCode()"&gt;Перевірити дужки&lt;/button&gt;
+
+            &lt;div id="result"&gt;&lt;/div&gt; &lt;!-- Місце для відображення результату на сторінці --&gt;
+
+            &lt;script&gt;
+                function checkBrackets(str) {
+                    const stack = [];
+                    const brackets = {
+                        '(': ')',
+                        '{': '}',
+                        '[': ']'
+                    };
+
+                    for (const char of str) {
+                        if (brackets[char]) {
+                            stack.push(char); // Відкриваюча дужка
+                        } else if (Object.values(brackets).includes(char)) {
+                            if (brackets[stack.pop()] !== char) {
+                                return false; // Невідповідність дужок
+                            }
+                        }
+                    }
+
+                    return stack.length === 0; // Перевірка, чи всі дужки закриті
+                }
+
+                function checkCode() {
+                    const input = document.getElementById('codeInput').value;
+                    const result = checkBrackets(input);
+
+                    // Вивести результат у консоль
+                    console.log(result
+                        ? "Код коректний!"
+                        : "Помилка: дужки некоректні!");
+
+                    // Вивести результат на веб-сторінці
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.textContent = result
+                        ? "Код коректний!"
+                        : "Помилка: дужки некоректні!";
+                }
+            &lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+    `;
+          };
 
 
           break;
