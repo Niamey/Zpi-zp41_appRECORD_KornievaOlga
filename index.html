@@ -1869,6 +1869,64 @@ header nav ul li a {
     `;
           };
 
+          sidebarButtonHTMLCodeTables.onclick = function () {
+            content.innerHTML = `
+        <!-- Вставка картинки -->
+        <img src="images/laba-3.2.6.png" alt="Medicines Discount" style="margin-top: 20px; width: 100%;" />
+
+        <!-- HTML код -->
+        <pre>&lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Medicines Discount&lt;/title&gt;
+            &lt;script&gt;
+                const medicines = [
+                    { name: "Noshpa", price: 170 },
+                    { name: "Analgin", price: 55 },
+                    { name: "Quanil", price: 310 },
+                    { name: "Alphacholine", price: 390 },
+                ];
+
+                // Function to apply discount and add IDs
+                const applyDiscount = (medicines) =&gt; {
+                    return medicines.map((medicine, index) =&gt; {
+                        if (medicine.price &gt; 300) {
+                            return {
+                                id: index + 1,
+                                name: medicine.name,
+                                price: medicine.price,
+                                discountedPrice: +(medicine.price * 0.7).toFixed(2),
+                            };
+                        }
+                        return {
+                            id: index + 1,
+                            name: medicine.name,
+                            price: medicine.price,
+                        };
+                    });
+                };
+
+                // Display the result
+                const displayMedicines = () =&gt; {
+                    const discountedMedicines = applyDiscount(medicines);
+                    console.clear();
+                    console.log("Updated Medicines List:");
+                    discountedMedicines.forEach(med =&gt; {
+                        const discountInfo = med.discountedPrice ? \` (Discounted Price: \${med.discountedPrice} грн)\` : "";
+                        console.log(\`ID: \${med.id}, Name: \${med.name}, Price: \${med.price} грн\${discountInfo}\`);
+                    });
+                };
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Medicines Discount&lt;/h1&gt;
+            &lt;button onclick="displayMedicines()"&gt;Show Discounted Medicines&lt;/button&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+    `;
+          };
 
 
           break;
