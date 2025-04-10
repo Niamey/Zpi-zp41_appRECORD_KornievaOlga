@@ -37,8 +37,9 @@
     <button onclick="showContent(4)">Лабораторна робота 2.2</button>
     <button onclick="showContent(5)">Лабораторна робота 3.1</button>
     <button onclick="showContent(6)">Лабораторна робота 3.2</button>
-    <button onclick="showContent(7)">Лабораторна робота 4.1</button>
-    <button onclick="showContent(8)">Лабораторна робота 4.2</button>
+    <button onclick="showContent(7)">Лабораторна робота 4</button>
+    <button onclick="showContent(8)">Лабораторна робота 5</button>
+    <button onclick="showContent(9)">Лабораторна робота 6</button>
   </div>
 
   <div class="content">
@@ -2059,19 +2060,452 @@ header nav ul li a {
           break;
         case 7:
           content.innerHTML = `
-                        <h3>Лабораторна робота 4.1</h3>
+                        <h3>Лабораторна робота 4</h3>
                          
-                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4.1</a></p>`;
-          sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.1';
-          sidebarButton.innerText = 'Тема, мета ЛР-4.1, місце розташування сайту, звіту';
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4</a></p>`;
+          sidebarButtonConclusion.innerText = 'Завдання- 10';
+          sidebarButton.sidebarButtonDescription = 'Тема, мета ЛР-4, місце розташування сайту, звіту';
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Тема, мета ЛР-4 </b><br><b>Тема:</b>КЛАСИ, ОБ\'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM), ПОДІЇ, ОБ\'ЄКТ ПОДІЇ, ДЕЛЕГУВАННЯ ПОДІЙ, THROTTLE, МОДУЛЬНОСТЬ КОДУ  <br><b> Мета:</b> придбати практичні навички роботи з об\`єктами. Методи об\`єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JAVASCRIPT  <br>  </p>');
+          };
+          sidebarButtonDescription.innerText = 'Тема, мета ЛР-4 ';
+          sidebarButton.innerText = 'Завдання-1';
+          sidebarButtonStructure.innerText = 'Завдання-3';
+          sidebarButtonHTMLCodeTables.innerText = 'Завдання-5';
+          sidebarButtonHTMLCodeForm.innerText = 'Завдання-7';
+          sidebarButtonHTMLCodePict.innerText = 'Завдання- 9';
+          sidebarButtonDescription.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">Інформація про ЛР-4</div>
+            <b>Тема, мета ЛР-4 </b><br>
+            <b>Тема:</b> КЛАСИ, ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM), ПОДІЇ, ОБ'ЄКТ ПОДІЇ, ДЕЛЕГУВАННЯ ПОДІЙ, THROTTLE, МОДУЛЬНОСТЬ КОДУ<br>
+            <b>Мета:</b> придбати практичні навички роботи з об\`єктами. Методи об\`єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JAVASCRIPT
+        </div>
+    `;
+};
+
+sidebarButton.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">ЗАВДАННЯ №1</div>
+            <p>У звітному HTML-документі створити html-розмітку, яка складається з наступних елементів: текст, кнопка, поле введення.</p>
+            <div style="margin: 20px 0;">
+                <button id="showMeBtn">SHOW ME</button>
+                <input type="text" id="inputField" style="margin-left: 10px;">
+            </div>
+            <p>Натискання на кнопку "SHOW ME" має виводити значення з поля введення у консолі.</p>
+            
+            <h3>Код рішення:</h3>
+            <pre>
+&lt;button id="showMeBtn"&gt;SHOW ME&lt;/button&gt;
+&lt;input type="text" id="inputField" style="margin-left: 10px;"&gt;
+
+&lt;script&gt;
+document.getElementById('showMeBtn').addEventListener('click', function() {
+    const inputValue = document.getElementById('inputField').value;
+    console.log(inputValue);
+});
+&lt;/script&gt;
+            </pre>
+        </div>
+    `;
+    
+    // Повторно добавляем обработчик события, так как DOM элемент был заменен
+    document.getElementById('showMeBtn').addEventListener('click', function() {
+        const inputValue = document.getElementById('inputField').value;
+        console.log(inputValue);
+        alert('Значення відправлено в консоль: ' + inputValue);
+    });
+};
+
+sidebarButtonStructure.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">ЗАВДАННЯ 3</div>
+            <p>У звітному HTML-документі створити html-розмітку, яка складається з наступних елементів: текст, кнопка, інпут (поле введення).</p>
+            
+            <div style="margin: 20px 0; background-color: #4CAF50; padding: 15px; border-radius: 4px;">
+                <input type="password" id="passwordField" placeholder="пароль">
+                <button id="toggleBtn">Приховати</button>
+            </div>
+            
+            <p>Кнопка "Приховати" ховає текст, виводячи зірочки замість введеної інформації, замінює назву кнопки на "Розкрити", при повторному натисканні текст знову стає доступним і кнопка набуває початкового вигляду.</p>
+            
+            <h3>Код рішення:</h3>
+            <pre>
+&lt;input type="password" id="passwordField" placeholder="пароль"&gt;
+&lt;button id="toggleBtn"&gt;Приховати&lt;/button&gt;
+
+&lt;script&gt;
+const passwordField = document.getElementById('passwordField');
+const toggleBtn = document.getElementById('toggleBtn');
+
+toggleBtn.addEventListener('click', function() {
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        toggleBtn.textContent = 'Приховати';
+    } else {
+        passwordField.type = 'password';
+        toggleBtn.textContent = 'Розкрити';
+    }
+});
+&lt;/script&gt;
+            </pre>
+        </div>
+    `;
+    
+    // Добавляем обработчик
+    const passwordField = document.getElementById('passwordField');
+    const toggleBtn = document.getElementById('toggleBtn');
+    
+    toggleBtn.addEventListener('click', function() {
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            toggleBtn.textContent = 'Приховати';
+        } else {
+            passwordField.type = 'password';
+            toggleBtn.textContent = 'Розкрити';
+        }
+    });
+};
+
+sidebarButtonHTMLCodeTables.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">ЗАВДАННЯ 5</div>
+            <p>У звітному HTML-документі створити html-розмітку, яка складається з наступних елементів:
+                <br>- текст, з використанням селектора класу (<span style="color:red">class="taskTitle"</span>),
+                <br>- div, з використанням селектора ідентифікатора (<span style="color:red">id="place"</span>)</p>
+            
+            <div id="place"></div>
+            
+            <p>Додайте слухач кліку на window і визначте чи клікнув користувач у div з id="place".</p>
+            <p>Примітка: Якщо користувач клікнув на зеленому прямокутнику — у консолі виведе true. У протилежному випадку — false</p>
+            
+            <h3>Код рішення:</h3>
+            <pre>
+&lt;div id="place" style="width: 150px; height: 300px; background-color: green;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+window.addEventListener('click', function(event) {
+    const isClickInPlace = event.target.id === 'place';
+    console.log(isClickInPlace);
+});
+&lt;/script&gt;
+            </pre>
+        </div>
+    `;
+    
+    // Добавляем обработчик после создания элемента
+    window.addEventListener('click', function(event) {
+        const isClickInPlace = event.target.id === 'place';
+        if (isClickInPlace) {
+            console.log(true);
+            alert('Ви клікнули на зелений прямокутник. В консолі: true');
+        } else {
+            console.log(false);
+        }
+    });
+};
+
+sidebarButtonHTMLCodeForm.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">ЗАВДАННЯ 7</div>
+            <p>HTML містить список категорій ulCategories:</p>
+            
+            <div style="background-color: #f5f5f5; padding: 15px; border-radius: 4px;">
+                <h2>Categories</h2>
+                <ul id="categories">
+                    <li class="item">
+                        <h3>Animals</h3>
+                        <ul>
+                            <li>Cat</li>
+                            <li>Hamster</li>
+                            <li>Horse</li>
+                            <li>Parrot</li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <h3>Products</h3>
+                        <ul>
+                            <li>Bread</li>
+                            <li>Prasley</li>
+                            <li>Cheese</li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <h3>Technologies</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <p>Напишіть скрипт, який:</p>
+            <ol>
+                <li>Порахує і виведе в консоль кількість категорій в ulCategories, тобто елементів li.item.</li>
+                <li>Для кожного елемента li.item у списку ulCategories, знайде і виведе в консоль текст заголовку елемента (тегу <h3>) і кількість елементів в категорії (усіх li, вкладених в нього).</li>
+            </ol>
+            <p>Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.</p>
+            
+            <h3>Код рішення:</h3>
+            <pre>
+&lt;script&gt;
+// 1. Кількість категорій
+const categories = document.querySelectorAll('#categories .item');
+ 
+
+// 2. Для кожної категорії
+categories.forEach(category => {
+    const categoryTitle = category.querySelector('h3').textContent;
+    const categoryItems = category.querySelectorAll('li').length - 1; // Віднімаємо 1, тому що li.item теж рахується
+ 
+});
+&lt;/script&gt;
+            </pre>
+            <button id="runCategoriesScript">Виконати скрипт</button>
+        </div>
+    `;
+    
+    // Добавляем обработчик для кнопки выполнения скрипта
+    document.getElementById('runCategoriesScript').addEventListener('click', function() {
+        // 1. Кількість категорій
+        const categories = document.querySelectorAll('#categories .item');
+        console.log(`Кількість категорій: ${categories.length}`);
+        
+        // 2. Для кожної категорії
+        let result = `Кількість категорій: ${categories.length}\n\n`;
+        categories.forEach(category => {
+            const categoryTitle = category.querySelector('h3').textContent;
+            const categoryItems = category.querySelectorAll('li').length - 1;
+            console.log(`Категорія: ${categoryTitle} | Кількість елементів: ${categoryItems}`);
+            result += `Категорія: ${categoryTitle} | Кількість елементів: ${categoryItems}\n`;
+        });
+        
+        alert(result);
+    });
+};
+
+sidebarButtonHTMLCodePict.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">ЗАВДАННЯ 9</div>
+            <p>Напишіть скрипт, який змінює колір фону елемента <body> через інлайн-стиль по кліку на button. Зміна кольору тестовим виступає для span.color.</p>
+            
+            <div class="widget">
+                <p>Background color: <span class="color">-</span></p>
+                <button type="button" class="change-color">Change color</button>
+            </div>
+            
+            <p>Для генерування випадкового кольору використовуй функцію getRandomHexColor():</p>
+            <pre>
+function getRandomHexColor() {
+  return \`#\${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}\`;
+}
+            </pre>
+            
+            <p>Зверни увагу, що функція getRandomHexColor() повертає колір у hex-форматі, в той час як колір в форматі rgb. Це нормально й не потребує жодних змін.</p>
+            
+            <h3>Код рішення:</h3>
+            <pre>
+&lt;div class="widget"&gt;
+  &lt;p&gt;Background color: &lt;span class="color"&gt;-&lt;/span&gt;&lt;/p&gt;
+  &lt;button type="button" class="change-color"&gt;Change color&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function getRandomHexColor() {
+  return \`#\${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}\`;
+}
+
+const changeColorBtn = document.querySelector('.change-color');
+const colorSpan = document.querySelector('.color');
+
+changeColorBtn.addEventListener('click', function() {
+  const randomColor = getRandomHexColor();
+  document.body.style.backgroundColor = randomColor;
+  colorSpan.textContent = randomColor;
+});
+&lt;/script&gt;
+            </pre>
+        </div>
+    `;
+    
+    // Добавляем обработчик
+    function getRandomHexColor() {
+        return `#${Math.floor(Math.random() * 16777215)
+            .toString(16)
+            .padStart(6, 0)}`;
+    }
+    
+    const changeColorBtn = document.querySelector('.change-color');
+    const colorSpan = document.querySelector('.color');
+    
+    changeColorBtn.addEventListener('click', function() {
+        const randomColor = getRandomHexColor();
+        document.body.style.backgroundColor = randomColor;
+        colorSpan.textContent = randomColor;
+    });
+};
+
+sidebarButtonConclusion.onclick = function () {
+    content.innerHTML = `
+        <div class="task-container" style="display:block;">
+            <div class="task-title">ЗАВДАННЯ 10</div>
+            <p>Напишіть скрипт створення й очищення колекції елементів з наступним функціоналом.</p>
+            
+            <p>Є інпут, у який користувач вводить бажану кількість елементів. Після натискання на кнопку Create має рендеритися відповідна кількість елементів і очищатися значення в інпуті. При повторному натисканні на кнопку Destroy колекція елементів має очищатися.</p>
+            
+            <div id="controls">
+                <input type="number" min="1" max="100" step="1" value="5">
+                <button type="button" data-create>Create</button>
+                <button type="button" data-destroy>Destroy</button>
+            </div>
+            
+            <div id="boxes"></div>
+            
+            <p>Після натискання користувачем на кнопку Create треба проаналізувати значення в input, воно має бути в межах від 1 до 100 включно. Тільки якщо воно задовольняє умову, мають додаватися нові <div> елементи в DOM.</p>
+            
+            <p>Для рендеру елементів на сторінці створи функцію createBoxes(amount), яка приймає один параметр — число, що зберігає кількість елементів для рендеру. Функція має створювати стільки <div> елементів, скільки вказано в параметрі amount і додавати їх у DOM дочірніми елементами для div#boxes.</p>
+            
+            <ol>
+                <li>Розміри першого <div> елемента мають бути 30px на 30px.</li>
+                <li>Кожен наступний елемент повинен бути ширшим і вищим від попереднього на 10px.</li>
+                <li>Усі елементи повинні мати випадковий колір фону. Використовуй готову функцію getRandomHexColor() для отримання випадкового кольору.</li>
+            </ol>
+            
+            <p>Для очищення колекції після натискання на кнопку Destroy створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.</p>
+            
+            <h3>Код рішення:</h3>
+            <pre>
+&lt;div id="controls"&gt;
+  &lt;input type="number" min="1" max="100" step="1" value="5"&gt;
+  &lt;button type="button" data-create&gt;Create&lt;/button&gt;
+  &lt;button type="button" data-destroy&gt;Destroy&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id="boxes"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+function getRandomHexColor() {
+  return \`#\${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}\`;
+}
+
+const controls = document.querySelector('#controls');
+const createBtn = document.querySelector('[data-create]');
+const destroyBtn = document.querySelector('[data-destroy]');
+const input = document.querySelector('input');
+const boxesContainer = document.querySelector('#boxes');
+
+createBtn.addEventListener('click', () => {
+  const amount = Number(input.value);
+  if (amount >= 1 && amount <= 100) {
+    createBoxes(amount);
+    input.value = '';
+  } else {
+    alert('Введіть число від 1 до 100');
+  }
+});
+
+destroyBtn.addEventListener('click', destroyBoxes);
+
+function createBoxes(amount) {
+  destroyBoxes(); // Очищаємо попередні елементи
+  
+  let size = 30;
+  const fragment = document.createDocumentFragment();
+  
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    box.classList.add('box');
+    box.style.width = \`\${size}px\`;
+    box.style.height = \`\${size}px\`;
+    box.style.backgroundColor = getRandomHexColor();
+    fragment.appendChild(box);
+    size += 10;
+  }
+  
+  boxesContainer.appendChild(fragment);
+}
+
+function destroyBoxes() {
+  boxesContainer.innerHTML = '';
+}
+&lt;/script&gt;
+            </pre>
+        </div>
+    `;
+    
+    // Инициализируем функциональность
+    function getRandomHexColor() {
+        return `#${Math.floor(Math.random() * 16777215)
+            .toString(16)
+            .padStart(6, 0)}`;
+    }
+    
+    setTimeout(() => {
+        const createBtn = document.querySelector('[data-create]');
+        const destroyBtn = document.querySelector('[data-destroy]');
+        const input = document.querySelector('input[type="number"]');
+        const boxesContainer = document.querySelector('#boxes');
+        
+        createBtn.addEventListener('click', () => {
+            const amount = Number(input.value);
+            if (amount >= 1 && amount <= 100) {
+                createBoxes(amount);
+                input.value = '';
+            } else {
+                alert('Введіть число від 1 до 100');
+            }
+        });
+        
+        destroyBtn.addEventListener('click', destroyBoxes);
+        
+        function createBoxes(amount) {
+            destroyBoxes(); // Очищаємо попередні елементи
+            
+            let size = 30;
+            const fragment = document.createDocumentFragment();
+            
+            for (let i = 0; i < amount; i++) {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.style.width = `${size}px`;
+                box.style.height = `${size}px`;
+                box.style.backgroundColor = getRandomHexColor();
+                fragment.appendChild(box);
+                size += 10;
+            }
+            
+            boxesContainer.appendChild(fragment);
+        }
+        
+        function destroyBoxes() {
+            boxesContainer.innerHTML = '';
+        }
+    }, 100);
+};
           break;
         case 8:
           content.innerHTML = `
-                        <h3>Лабораторна робота 4.2</h3>
+                        <h3>Лабораторна робота 5</h3>
                         
-                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР4.2</а></п>`;
-          sidebarButtonConclusion.innerText = 'Висновки до ЛР-4.2';
-          sidebarButton.innerText = 'Тема, мета ЛР-4.2, місце розташування сайту, звіту';
+                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР5</а></п>`;
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-5';
+          sidebarButton.innerText = 'Тема, мета ЛР-5, місце розташування сайту, звіту';
           break;
       }
     }
