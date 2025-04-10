@@ -2178,14 +2178,17 @@ sidebarButtonHTMLCodeTables.onclick = function () {
                 <br>- текст, з використанням селектора класу (<span style="color:red">class="taskTitle"</span>),
                 <br>- div, з використанням селектора ідентифікатора (<span style="color:red">id="place"</span>)</p>
             
-            <div id="place"></div>
+            <div class="taskTitle">Додайте слухач кліку на window і визначте чи клікнув користувач у div з id="place".</div>
             
-            <p>Додайте слухач кліку на window і визначте чи клікнув користувач у div з id="place".</p>
+            <div id="place" style="width: 150px; height: 300px; background-color: green; margin: 20px 0;"></div>
+            
             <p>Примітка: Якщо користувач клікнув на зеленому прямокутнику — у консолі виведе true. У протилежному випадку — false</p>
             
             <h3>Код рішення:</h3>
             <pre>
-&lt;div id="place" style="width: 150px; height: 300px; background-color: green;"&gt;&lt;/div&gt;
+&lt;div class="taskTitle"&gt;Додайте слухач кліку на window і визначте чи клікнув користувач у div з id="place".&lt;/div&gt;
+
+&lt;div id="place" style="width: 150px; height: 300px; background-color: green; margin: 20px 0;"&gt;&lt;/div&gt;
 
 &lt;script&gt;
 window.addEventListener('click', function(event) {
@@ -2194,19 +2197,35 @@ window.addEventListener('click', function(event) {
 });
 &lt;/script&gt;
             </pre>
+            <div id="placeClickStatus" style="margin-top: 15px; padding: 10px; background-color: #f0f0f0; border-radius: 4px;">
+                Результат кліку: <span id="clickResult">Ще не клікали</span>
+            </div>
         </div>
     `;
     
-    // Добавляем обработчик после создания элемента
-    window.addEventListener('click', function(event) {
+    // Удаляем предыдущий обработчик, если он существует
+    window.removeEventListener('click', window.handlePlaceClick);
+    
+    // Создаем новый обработчик и сохраняем ссылку на него в свойстве window
+    window.handlePlaceClick = function(event) {
         const isClickInPlace = event.target.id === 'place';
-        if (isClickInPlace) {
-            console.log(true);
-            alert('Ви клікнули на зелений прямокутник. В консолі: true');
-        } else {
-            console.log(false);
+        console.log(isClickInPlace);
+        
+        // Обновляем статус на странице
+        const clickResult = document.getElementById('clickResult');
+        if (clickResult) {
+            if (isClickInPlace) {
+                clickResult.textContent = 'true - Ви клікнули на зелений прямокутник';
+                clickResult.style.color = 'green';
+            } else {
+                clickResult.textContent = 'false - Ви клікнули не на зелений прямокутник';
+                clickResult.style.color = 'red';
+            }
         }
-    });
+    };
+    
+    // Добавляем обработчик
+    window.addEventListener('click', window.handlePlaceClick);
 };
 
 sidebarButtonHTMLCodeForm.onclick = function () {
