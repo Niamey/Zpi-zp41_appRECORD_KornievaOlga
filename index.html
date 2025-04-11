@@ -2522,12 +2522,26 @@ function destroyBoxes() {
           content.innerHTML = `
                         <h3>Лабораторна робота 5</h3>
                         
-                        <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР5</а></п>`;
-          sidebarButtonConclusion.innerText = 'Висновки до ЛР-5';
-          sidebarButton.innerText = 'Тема, мета ЛР-5, місце розташування сайту, звіту';
+                        <p>Місце розташування сайту: <br> <a href="https://niamey.github.io/zpi-zp_Okornieva_Laba5_OKR/"> Посилання на ЛР5 - одна сторінка </а></p><br> <p><a href=" https://niamey.github.io/zpi-zp_OlgaKornieva_Laba5_Dve-separatePAgest/">Посилання на ЛР5 - дві сторінки </а></p>`;
+          sidebarButtonConclusion.innerText = 'Висновки до ЛР-5'; 
+          sidebarButton.sidebarButtonDescription = 'Тема, мета ЛР-5, місце розташування сайту, звіту';
+          sidebarButtonDescription.innerText = 'Тема, мета ЛР-5 ';
+          sidebarButtonDescription.onclick = function () {
+            showText('<b>Тема, мета ЛР-5 </b><br><b>Тема:</b> WEB-СХОВИЩЕ. WEB STORAGE API. МОДУЛЬНОСТЬ КОДУ. СТВОРЕННЯ МОДАЛЬНОГО ВІКНА.<br><b> Мета: придбати практичні навички роботи створення модального вікна; повторити процес створення макету, зокрема створення макету галереї довільних зображень; закріпити навички роботи з делегуванням подій.  <br>  </p>');
+          }; 
+          sidebarButton.innerText = 'Завдання-1';
+          sidebarButtonStructure.innerText = 'Завдання-2';
+          sidebarButtonHTMLCodeTables.style.display = 'none';
+  sidebarButtonHTMLCodeForm.style.display = 'none';
+  sidebarButtonHTMLCodePict.style.display = 'none';
+
+  sidebarButton.onclick = function () { showText('<p><b>Галерея картинок </p>  <p><img src="images/laba5-task1.jpg" alt="виконання задачі -1" style="width:100%; max-width:800px;"></p><p><img src="images/laba2.jpg" alt="перехід на одне із забражень із списку " style="width:100%; max-width:800px;"> / ') };
+    sidebarButtonStructure.onclick = function() {showText('<p><b>Форма зворотнього звязку </p>  <p><img src="images/task2-1.jpg" alt="виконання задачі -1" style="width:100%; max-width:800px;"> "  /')}  ;
+      sidebarButtonConclusion.onclick = function () { showText('<b>Висновки до ЛР-1.1</b><br>Розроблена веб-галерея з формою для взаємодії забезпечує зручний перегляд зображень через інтуїтивний інтерфейс, демонструючи ефективне використання JavaScript для обробки взаємодії користувача з контентом. '); };
           break;
       }
     }
+
 
     function showText(text) {
       const content = document.querySelector('.main-content');
