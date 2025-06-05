@@ -2539,9 +2539,986 @@ function destroyBoxes() {
     sidebarButtonStructure.onclick = function() {showText('<p><b>Форма зворотнього звязку </p>  <p><img src="images/task2-1.jpg" alt="виконання задачі -1" style="width:100%; max-width:800px;"> "  /')}  ;
       sidebarButtonConclusion.onclick = function () { showText('<b>Висновки до ЛР-1.1</b><br>Розроблена веб-галерея з формою для взаємодії забезпечує зручний перегляд зображень через інтуїтивний інтерфейс, демонструючи ефективне використання JavaScript для обробки взаємодії користувача з контентом. '); };
           break;
-      }
-    }
+case 9:
+  content.innerHTML = `
+    <h3>Лабораторна робота 6</h3>
+    
+    <p>Місце розташування сайту: <a href="https://niamey.github.io/Zpi-zp41_appWEB_KornievaOlga/">Посилання на ЛР6</a></p>`;
+  
+  sidebarButtonConclusion.innerText = 'Висновки до ЛР-6';
+  sidebarButton.innerText = 'Тема, мета ЛР-6';
+  sidebarButtonStructure.innerText = 'Завдання 1';
+  sidebarButtonHTMLCodeTables.innerText = 'Завдання 2';
+  sidebarButtonHTMLCodeForm.innerText = 'Завдання 3';
+  sidebarButtonHTMLCodePict.style.display = 'none';
+  sidebarButtonHTMLCodePict.innerText = '';
+  sidebarButtonDescription.style.display = 'none';
 
+      sidebarButtonDescription.onclick = function () {
+            showText('<b>Тема, мета ЛР-6 </b><br><b>Тема:</b> WEB-СХОВИЩЕ. WEB STORAGE API. МОДУЛЬНОСТЬ КОДУ. СТВОРЕННЯ МОДАЛЬНОГО ВІКНА.<br><b> Мета: придбати практичні навички роботи створення модального вікна; повторити процес створення макету, зокрема створення макету галереї довільних зображень; закріпити навички роботи з делегуванням подій.  <br>  </p>');
+          }; 
+  
+  // Скидаємо видимість всіх кнопок
+  sidebarButtonHTMLCodeTables.style.display = 'block';
+  sidebarButtonHTMLCodeForm.style.display = 'block';
+  
+  sidebarButtonDescription.onclick = function () {
+    showText('<b>Опис предметного середовища.</b><br>Предметна галузь: Інтернет-платформа для ІТ-компанії "AI-partnerio".<br><p><b>Тема:</b> Створення веб-сайту для ІТ-компанії "AI-partnerio"</p><br><b>Сценарій використання сайту:</b><br>Ознайомлення з рішеннями та послугами: Користувач заходить на сайт і переглядає каталог послуг, які надає компанія.<br>Розробка систем машинного навчання.<br>Реєстрація та заповнення профілю: Користувач може створити обліковий запис, зазначити свої потреби , а також заповнити профіль для отримання персоналізованих рекомендацій.<br>Оформлення замовлення послуг<br>Отримання рекомендацій і пропозицій:');
+  };
+
+  sidebarButton.onclick = function () {
+    showText('<b>Тема, мета ЛР-6:</b><br><b>Тема:</b>АСИНХРОННІСТЬ. ПРОМІСИ. HTTP-ЗАПИТИ. REST API. AJAX. КРОС-ДОМЕННІ ЗАПИТИ.<br><b>Мета:</b> придбати практичні навички роботи створення промісу. Методи then(),catch(,finally().Ланцюжки промісів. Методи класу Promise. Протокол HTTP.Протокол HTTPS.. REST API Формат запиту. HTTP-методи. HTTP-заголовки.AJAX. Fetch API. Робота з публічним REST API</a>');
+  };
+
+sidebarButtonStructure.onclick = function () {
+    // Створюємо HTML для таймера з покращеним дизайном
+    const timerHTML = `
+        <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 30px; text-align: center; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <h2 style="margin: 0 0 30px 0; color: white;">⏰ Countdown Timer</h2>
+                
+                <div style="margin-bottom: 30px;">
+                    <input type="text" id="datetime-picker" placeholder="Оберіть дату і час" 
+                           style="padding: 12px; border: none; border-radius: 8px; font-size: 16px; width: 200px; margin-right: 10px; text-align: center;">
+                    <button data-start style="padding: 12px 24px; background: #fff; color: #667eea; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; font-weight: bold; transition: all 0.3s;">
+                        Запустити
+                    </button>
+                </div>
+                
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 30px;">
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px; backdrop-filter: blur(10px);">
+                        <div data-days style="font-size: 2.5em; font-weight: bold; color: #fff;">00</div>
+                        <div style="font-size: 0.9em; color: rgba(255,255,255,0.8); margin-top: 5px;">днів</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px; backdrop-filter: blur(10px);">
+                        <div data-hours style="font-size: 2.5em; font-weight: bold; color: #fff;">00</div>
+                        <div style="font-size: 0.9em; color: rgba(255,255,255,0.8); margin-top: 5px;">годин</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px; backdrop-filter: blur(10px);">
+                        <div data-minutes style="font-size: 2.5em; font-weight: bold; color: #fff;">00</div>
+                        <div style="font-size: 0.9em; color: rgba(255,255,255,0.8); margin-top: 5px;">хвилин</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px; backdrop-filter: blur(10px);">
+                        <div data-seconds style="font-size: 2.5em; font-weight: bold; color: #fff;">00</div>
+                        <div style="font-size: 0.9em; color: rgba(255,255,255,0.8); margin-top: 5px;">секунд</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Вставляємо HTML (замініть document.body на ваш контейнер)
+    document.body.innerHTML = timerHTML;
+    
+    // Отримуємо всі необхідні елементи
+    const refs = {
+        startBtn: document.querySelector('[data-start]'),
+        input: document.querySelector('#datetime-picker'),
+        days: document.querySelector('[data-days]'),
+        hours: document.querySelector('[data-hours]'),
+        minutes: document.querySelector('[data-minutes]'),
+        seconds: document.querySelector('[data-seconds]'),
+    };
+    
+    // Перевіряємо чи всі елементи знайдені
+    const missingElements = Object.keys(refs).filter(key => !refs[key]);
+    if (missingElements.length > 0) {
+        console.error('Не знайдені елементи:', missingElements);
+        return;
+    }
+    
+    let selectedDate = null;
+    let timerId = null;
+    
+    // Початково кнопка відключена
+    refs.startBtn.disabled = true;
+    refs.startBtn.style.opacity = '0.5';
+    refs.startBtn.style.cursor = 'not-allowed';
+    
+    // Ініціалізація flatpickr (перевіряємо чи бібліотека підключена)
+    if (typeof flatpickr !== 'undefined') {
+        flatpickr(refs.input, {
+            enableTime: true,
+            time_24hr: true,
+            defaultDate: new Date(),
+            minuteIncrement: 1,
+            dateFormat: "Y-m-d H:i",
+            locale: {
+                firstDayOfWeek: 1
+            },
+            onClose(selectedDates) {
+                console.log('Обрана дата:', selectedDates[0]);
+                selectedDate = selectedDates[0];
+                
+                if (!selectedDate) {
+                    refs.startBtn.disabled = true;
+                    refs.startBtn.style.opacity = '0.5';
+                    refs.startBtn.style.cursor = 'not-allowed';
+                    return;
+                }
+                
+                const now = new Date();
+                if (selectedDate <= now) {
+                    // Показуємо помилку
+                    showMessage("❌ Будь ласка, оберіть дату в майбутньому", "error");
+                    refs.startBtn.disabled = true;
+                    refs.startBtn.style.opacity = '0.5';
+                    refs.startBtn.style.cursor = 'not-allowed';
+                } else {
+                    // Дата валідна
+                    refs.startBtn.disabled = false;
+                    refs.startBtn.style.opacity = '1';
+                    refs.startBtn.style.cursor = 'pointer';
+                    showMessage("✅ Дату обрано! Можна запускати таймер", "success");
+                }
+            },
+        });
+    } else {
+        console.warn('Flatpickr не підключений. Використовується звичайний input.');
+        refs.input.type = 'datetime-local';
+        refs.input.addEventListener('change', function() {
+            const inputDate = new Date(this.value);
+            selectedDate = inputDate;
+            
+            if (selectedDate <= new Date()) {
+                showMessage("❌ Будь ласка, оберіть дату в майбутньому", "error");
+                refs.startBtn.disabled = true;
+                refs.startBtn.style.opacity = '0.5';
+            } else {
+                refs.startBtn.disabled = false;
+                refs.startBtn.style.opacity = '1';
+                showMessage("✅ Дату обрано!", "success");
+            }
+        });
+    }
+    
+    // Обробник кнопки запуску
+    refs.startBtn.addEventListener('click', () => {
+        if (!selectedDate) {
+            showMessage("❌ Спочатку оберіть дату", "error");
+            return;
+        }
+        
+        console.log('Запуск таймера для дати:', selectedDate);
+        
+        // Блокуємо кнопки
+        refs.startBtn.disabled = true;
+        refs.startBtn.style.opacity = '0.5';
+        refs.startBtn.textContent = 'Працює...';
+        refs.input.disabled = true;
+        refs.input.style.opacity = '0.5';
+        
+        // Очищуємо попередній таймер
+        if (timerId) {
+            clearInterval(timerId);
+        }
+        
+        // Функція оновлення таймера
+        function updateTimer() {
+            const now = new Date();
+            const delta = selectedDate - now;
+            
+            if (delta <= 0) {
+                // Таймер завершено
+                clearInterval(timerId);
+                updateClockFace({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+                
+                showMessage("🎉 Час вийшов! Таймер завершено!", "success");
+                
+                // Розблоковуємо кнопки
+                refs.startBtn.disabled = false;
+                refs.startBtn.style.opacity = '1';
+                refs.startBtn.textContent = 'Запустити';
+                refs.input.disabled = false;
+                refs.input.style.opacity = '1';
+                return;
+            }
+            
+            // Розраховуємо час що залишився
+            const timeLeft = convertMs(delta);
+            updateClockFace(timeLeft);
+        }
+        
+        // Перший запуск одразу
+        updateTimer();
+        
+        // Потім кожну секунду
+        timerId = setInterval(updateTimer, 1000);
+        
+        showMessage("⏰ Таймер запущено! Відлік розпочато", "info");
+    });
+    
+    // Функція оновлення відображення часу
+    function updateClockFace({ days, hours, minutes, seconds }) {
+        refs.days.textContent = addLeadingZero(days);
+        refs.hours.textContent = addLeadingZero(hours);
+        refs.minutes.textContent = addLeadingZero(minutes);
+        refs.seconds.textContent = addLeadingZero(seconds);
+    }
+    
+    // Додає нуль попереду для одноцифрових чисел
+    function addLeadingZero(value) {
+        return String(value).padStart(2, '0');
+    }
+    
+    // Конвертує мілісекунди в дні, години, хвилини, секунди
+    function convertMs(ms) {
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        
+        const days = Math.floor(ms / day);
+        const hours = Math.floor((ms % day) / hour);
+        const minutes = Math.floor((ms % hour) / minute);
+        const seconds = Math.floor((ms % minute) / second);
+        
+        return { days, hours, minutes, seconds };
+    }
+    
+    // Функція показу повідомлень
+    function showMessage(message, type = 'info') {
+        // Видаляємо попереднє повідомлення якщо є
+        const existingMsg = document.querySelector('.timer-message');
+        if (existingMsg) {
+            existingMsg.remove();
+        }
+        
+        const colors = {
+            success: '#4ade80',
+            error: '#f87171', 
+            info: '#60a5fa'
+        };
+        
+        const messageEl = document.createElement('div');
+        messageEl.className = 'timer-message';
+        messageEl.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${colors[type] || colors.info};
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-weight: bold;
+            max-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        `;
+        messageEl.textContent = message;
+        
+        // Додаємо CSS анімацію
+        if (!document.querySelector('#timer-animations')) {
+            const style = document.createElement('style');
+            style.id = 'timer-animations';
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(messageEl);
+        
+        // Автоматично видаляємо через 3 секунди
+        setTimeout(() => {
+            if (messageEl.parentNode) {
+                messageEl.style.animation = 'slideIn 0.3s ease-out reverse';
+                setTimeout(() => messageEl.remove(), 300);
+            }
+        }, 3000);
+    }
+};
+sidebarButtonHTMLCodeTables.onclick = function () {
+    // Створюємо HTML для демонстрації роботи з промісами
+    const promiseHTML = `
+        <div style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 30px; color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <h2 style="margin: 0 0 20px 0; text-align: center;">🚀 Promise Generator</h2>
+                <p style="text-align: center; margin-bottom: 30px; opacity: 0.9;">Створює проміси з заданою затримкою та результатом</p>
+                
+                <form class="form" style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <div style="margin-bottom: 20px;">
+                        <label for="delay" style="display: block; margin-bottom: 8px; font-weight: bold;">⏱️ Затримка (мс):</label>
+                        <input type="number" name="delay" id="delay" min="0" step="100" placeholder="1000" required
+                               style="width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; margin-bottom: 12px; font-weight: bold;">🎯 Стан промісу:</label>
+                        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255,255,255,0.1); padding: 10px 15px; border-radius: 8px; transition: all 0.3s;">
+                                <input type="radio" name="state" value="fulfilled" required style="transform: scale(1.2);">
+                                <span style="font-weight: bold;">✅ Fulfilled</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; background: rgba(255,255,255,0.1); padding: 10px 15px; border-radius: 8px; transition: all 0.3s;">
+                                <input type="radio" name="state" value="rejected" required style="transform: scale(1.2);">
+                                <span style="font-weight: bold;">❌ Rejected</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%; padding: 15px; background: #fff; color: #667eea; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: all 0.3s; text-transform: uppercase;">
+                        🚀 Створити Проміс
+                    </button>
+                </form>
+                
+                <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px; backdrop-filter: blur(10px);">
+                    <h3 style="margin: 0 0 15px 0; text-align: center;">📊 Результати:</h3>
+                    <div id="results" style="min-height: 50px; text-align: center; font-style: italic; opacity: 0.7;">
+                        Створіть проміс щоб побачити результат...
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; background: #f8f9fa; border-radius: 12px; padding: 25px; border-left: 5px solid #667eea;">
+                <h3 style="margin: 0 0 15px 0; color: #333;">💡 Як це працює:</h3>
+                <p style="margin: 0 0 10px 0; color: #666; line-height: 1.6;">
+                    <strong>Promise</strong> - це об'єкт, який представляє можливе завершення або невдачу асинхронної операції. 
+                    Цей генератор створює проміс з заданою затримкою та результатом.
+                </p>
+                <p style="margin: 0; color: #666; line-height: 1.6;">
+                    <strong>Fulfilled</strong> означає успішне виконання, <strong>Rejected</strong> - помилку. 
+                    Результат відображається через toast-повідомлення з відповідним кольором та іконкою.
+                </p>
+            </div>
+        </div>
+    `;
+    
+    // Замінюємо контент (адаптуйте під ваш контейнер)
+    document.body.innerHTML = promiseHTML;
+    
+    // Отримуємо елементи після вставки HTML
+    const form = document.querySelector('.form');
+    const resultsDiv = document.querySelector('#results');
+    
+    if (!form) {
+        console.error('Форма не знайдена');
+        return;
+    }
+    
+    // Додаємо обробник подачі форми
+    form.addEventListener('submit', handleSubmit);
+    
+    function handleSubmit(event) {
+        // Запобігаємо стандартній поведінці форми
+        event.preventDefault();
+        
+        // Отримуємо значення з форми
+        const delay = parseInt(form.elements.delay.value);
+        const state = form.elements.state.value;
+        
+        // Валідація
+        if (!delay || delay < 0) {
+            showToast('❌ Введіть коректну затримку', 'error');
+            return;
+        }
+        
+        if (!state) {
+            showToast('❌ Оберіть стан промісу', 'error');
+            return;
+        }
+        
+        // Показуємо що проміс створюється
+        resultsDiv.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <div style="width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top: 3px solid white; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                <span>Створюємо проміс з затримкою ${delay}мс...</span>
+            </div>
+        `;
+        
+        // Додаємо CSS для анімації завантаження
+        if (!document.querySelector('#loading-animation')) {
+            const style = document.createElement('style');
+            style.id = 'loading-animation';
+            style.textContent = `
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Створюємо та обробляємо проміс
+        createPromise(delay, state)
+            .then(({ delay }) => {
+                // Успішний результат
+                showToast(`✅ Fulfilled promise in ${delay}ms`, 'success');
+                resultsDiv.innerHTML = `
+                    <div style="color: #4ade80; font-weight: bold; font-size: 18px;">
+                        ✅ Проміс виконано успішно за ${delay}мс
+                    </div>
+                    <div style="margin-top: 10px; font-size: 14px; opacity: 0.8;">
+                        Час: ${new Date().toLocaleTimeString()}
+                    </div>
+                `;
+            })
+            .catch(({ delay }) => {
+                // Помилка
+                showToast(`❌ Rejected promise in ${delay}ms`, 'error');
+                resultsDiv.innerHTML = `
+                    <div style="color: #f87171; font-weight: bold; font-size: 18px;">
+                        ❌ Проміс відхилено за ${delay}мс
+                    </div>
+                    <div style="margin-top: 10px; font-size: 14px; opacity: 0.8;">
+                        Час: ${new Date().toLocaleTimeString()}
+                    </div>
+                `;
+            });
+        
+        // Скидаємо форму
+        form.reset();
+    }
+    
+    // Функція створення промісу
+    function createPromise(delay, state) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (state === 'fulfilled') {
+                    resolve({ delay });
+                } else {
+                    reject({ delay });
+                }
+            }, delay);
+        });
+    }
+    
+    // Функція показу toast-повідомлень (альтернатива iziToast)
+    function showToast(message, type = 'info') {
+        // Видаляємо попереднє повідомлення
+        const existingToast = document.querySelector('.custom-toast');
+        if (existingToast) {
+            existingToast.remove();
+        }
+        
+        const colors = {
+            success: { bg: '#4ade80', text: '#ffffff' },
+            error: { bg: '#f87171', text: '#ffffff' },
+            info: { bg: '#60a5fa', text: '#ffffff' }
+        };
+        
+        const color = colors[type] || colors.info;
+        
+        const toast = document.createElement('div');
+        toast.className = 'custom-toast';
+        toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${color.bg};
+            color: ${color.text};
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-weight: bold;
+            max-width: 350px;
+            animation: slideInToast 0.3s ease-out;
+            word-wrap: break-word;
+        `;
+        toast.textContent = message;
+        
+        // Додаємо CSS анімацію для toast
+        if (!document.querySelector('#toast-animations')) {
+            const style = document.createElement('style');
+            style.id = 'toast-animations';
+            style.textContent = `
+                @keyframes slideInToast {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(toast);
+        
+        // Автоматично видаляємо через 4 секунди
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.style.animation = 'slideInToast 0.3s ease-out reverse';
+                setTimeout(() => toast.remove(), 300);
+            }
+        }, 4000);
+    }
+    
+    console.log('Promise Generator ініціалізовано успішно!');
+};
+ sidebarButtonHTMLCodeForm.onclick = function () {
+    // Створюємо HTML для галереї зображень згідно макету
+    const imageGalleryHTML = `
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa;">
+            
+            <!-- Форма пошуку -->
+            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <form class="search-form" style="display: flex; gap: 12px; align-items: center;">
+                    <input 
+                        type="text" 
+                        name="searchQuery" 
+                        autocomplete="off" 
+                        placeholder="Search images (nature, city, food, animals, etc.)"
+                        style="flex: 1; padding: 10px 16px; border: 2px solid #e1e5e9; border-radius: 4px; font-size: 14px; outline: none; transition: border-color 0.2s;"
+                    />
+                    <button 
+                        type="submit" 
+                        style="padding: 10px 20px; background: #4285f4; color: white; border: none; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background-color 0.2s;"
+                    >
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Статуси застосунку -->
+            <div class="app-states" style="margin-bottom: 20px;">
+                <!-- Стан: очікування введення -->
+                <div class="state-initial" style="display: block;">
+                    <div style="background: white; border-radius: 8px; padding: 40px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <div style="width: 64px; height: 64px; background: #f1f3f4; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+                            🔍
+                        </div>
+                        <h3 style="margin: 0 0 8px 0; color: #202124; font-size: 18px; font-weight: 500;">Search for images</h3>
+                        <p style="margin: 0; color: #5f6368; font-size: 14px;">Enter a keyword: nature, city, food, animals, technology, business, art</p>
+                    </div>
+                </div>
+
+                <!-- Стан: помилка -->
+                <div class="state-error" style="display: none;">
+                    <div style="background: white; border-radius: 8px; padding: 40px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <div style="width: 64px; height: 64px; background: #fce8e6; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #d93025;">
+                            ❌
+                        </div>
+                        <h3 style="margin: 0 0 8px 0; color: #d93025; font-size: 18px; font-weight: 500;">No images found</h3>
+                        <p style="margin: 0; color: #5f6368; font-size: 14px;">Sorry, there are no images matching your search query. Try: nature, city, food, animals, technology, business, art</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Галерея зображень -->
+            <div class="gallery-container" style="display: none;">
+                <div style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <ul class="gallery" style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;"></ul>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Вставляємо HTML
+    document.body.innerHTML = imageGalleryHTML;
+    
+    // Масив зображень згідно завданню
+    const images = [
+        // Природа
+        {
+            preview: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop',
+            description: 'Beautiful mountain landscape with lake reflection',
+            tags: ['nature', 'mountain', 'landscape', 'lake']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop',
+            description: 'Misty forest with tall trees',
+            tags: ['nature', 'forest', 'trees', 'mist']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop',
+            description: 'Sunset over ocean waves',
+            tags: ['nature', 'ocean', 'sunset', 'waves']
+        },
+        
+        // Міста
+        {
+            preview: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&h=800&fit=crop',
+            description: 'Modern city skyline at night',
+            tags: ['city', 'skyline', 'night', 'urban']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop',
+            description: 'Busy city street with traffic',
+            tags: ['city', 'street', 'traffic', 'urban']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1200&h=800&fit=crop',
+            description: 'Historic architecture and buildings',
+            tags: ['city', 'architecture', 'building', 'historic']
+        },
+        
+        // Їжа
+        {
+            preview: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=1200&h=800&fit=crop',
+            description: 'Delicious Italian pizza with fresh ingredients',
+            tags: ['food', 'pizza', 'italian', 'delicious']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=1200&h=800&fit=crop',
+            description: 'Fresh sushi and Japanese cuisine',
+            tags: ['food', 'sushi', 'japanese', 'fresh']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=800&fit=crop',
+            description: 'Healthy salad with vegetables',
+            tags: ['food', 'salad', 'healthy', 'vegetables']
+        },
+        
+        // Тварини
+        {
+            preview: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&h=800&fit=crop',
+            description: 'Cute golden retriever dog',
+            tags: ['animals', 'dog', 'pet', 'cute']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=800&fit=crop',
+            description: 'Fluffy orange cat sitting',
+            tags: ['animals', 'cat', 'pet', 'fluffy']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1549366021-9f761d040a94?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1549366021-9f761d040a94?w=1200&h=800&fit=crop',
+            description: 'Wild lion in natural habitat',
+            tags: ['animals', 'lion', 'wild', 'safari']
+        },
+        
+        // Технології
+        {
+            preview: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1200&h=800&fit=crop',
+            description: 'Modern laptop and workspace',
+            tags: ['technology', 'laptop', 'workspace', 'modern']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop',
+            description: 'Smartphone with apps interface',
+            tags: ['technology', 'smartphone', 'apps', 'digital']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=800&fit=crop',
+            description: 'Programming code on computer screen',
+            tags: ['technology', 'programming', 'code', 'computer']
+        },
+        
+        // Бізнес
+        {
+            preview: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=800&fit=crop',
+            description: 'Business team meeting in office',
+            tags: ['business', 'team', 'meeting', 'office']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop',
+            description: 'Professional businessman portrait',
+            tags: ['business', 'professional', 'portrait', 'suit']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=1200&h=800&fit=crop',
+            description: 'Business graphs and charts analysis',
+            tags: ['business', 'charts', 'analysis', 'data']
+        },
+        
+        // Мистецтво
+        {
+            preview: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&h=800&fit=crop',
+            description: 'Colorful abstract painting',
+            tags: ['art', 'painting', 'abstract', 'colorful']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop',
+            description: 'Artist painting on canvas',
+            tags: ['art', 'artist', 'canvas', 'creative']
+        },
+        {
+            preview: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=400&h=300&fit=crop',
+            original: 'https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=1200&h=800&fit=crop',
+            description: 'Modern art gallery exhibition',
+            tags: ['art', 'gallery', 'exhibition', 'modern']
+        }
+    ];
+    
+    // Додаємо CSS стилі
+    if (!document.querySelector('#gallery-styles')) {
+        const style = document.createElement('style');
+        style.id = 'gallery-styles';
+        style.textContent = `
+            /* Стилі для форми */
+            .search-form input:focus {
+                border-color: #4285f4;
+                box-shadow: 0 0 0 1px #4285f4;
+            }
+            
+            .search-form button:hover {
+                background: #3367d6;
+            }
+            
+            /* Стилі для галереї */
+            .gallery-item {
+                position: relative;
+                border-radius: 4px;
+                overflow: hidden;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+                aspect-ratio: 4/3;
+                background: #f8f9fa;
+            }
+            
+            .gallery-item:hover {
+                transform: scale(1.02);
+            }
+            
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: opacity 0.2s ease;
+            }
+            
+            .gallery-item img:hover {
+                opacity: 0.9;
+            }
+            
+            /* Адаптивність */
+            @media (max-width: 768px) {
+                .gallery {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                
+                .search-form {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+                
+                .search-form button {
+                    margin-top: 8px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .gallery {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    // Отримуємо елементи
+    const searchForm = document.querySelector('.search-form');
+    const gallery = document.querySelector('.gallery');
+    const galleryContainer = document.querySelector('.gallery-container');
+    
+    // Стани застосунку
+    const states = {
+        initial: document.querySelector('.state-initial'),
+        error: document.querySelector('.state-error')
+    };
+    
+    // Обробник форми пошуку
+    searchForm.addEventListener('submit', handleSearch);
+    
+    function handleSearch(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(event.target);
+        const searchQuery = formData.get('searchQuery').trim().toLowerCase();
+        
+        // Перевірка на порожній рядок
+        if (!searchQuery) {
+            showToast('Please enter a search term', 'error');
+            return;
+        }
+        
+        // Фільтруємо зображення за пошуковим запитом
+        const filteredImages = images.filter(image => 
+            image.tags.some(tag => tag.toLowerCase().includes(searchQuery)) ||
+            image.description.toLowerCase().includes(searchQuery)
+        );
+        
+        if (filteredImages.length === 0) {
+            showState('error');
+            return;
+        }
+        
+        // Відображаємо результати
+        renderGallery(filteredImages);
+        showState('gallery');
+        showToast(`Found ${filteredImages.length} images`, 'success');
+    }
+    
+    // Функція відображення галереї
+    function renderGallery(imagesToShow) {
+        const galleryMarkup = imagesToShow.map(image => createImageCard(image)).join('');
+        gallery.innerHTML = galleryMarkup;
+    }
+    
+    // Функція створення картки зображення
+    function createImageCard(image) {
+        return `
+            <li class="gallery-item">
+                <img src="${image.preview}" alt="${image.description}" data-original="${image.original}" data-description="${image.description}" />
+            </li>
+        `;
+    }
+    
+    // Делегування подій на галереї
+    gallery.addEventListener('click', (event) => {
+        // Перевіряємо, чи клікнули на зображення
+        if (event.target.nodeName !== 'IMG') {
+            return;
+        }
+        
+        const originalUrl = event.target.dataset.original;
+        const description = event.target.dataset.description;
+        
+        // Виводимо посилання в консоль (як в завданні)
+        console.log('Large image URL:', originalUrl);
+        
+        // Відкриваємо модальне вікно
+        openModal(originalUrl, description);
+    });
+    
+    // Функція керування станами
+    function showState(stateName) {
+        // Ховаємо всі стани
+        Object.values(states).forEach(state => {
+            if (state) state.style.display = 'none';
+        });
+        galleryContainer.style.display = 'none';
+        
+        // Показуємо потрібний стан
+        if (stateName === 'gallery') {
+            galleryContainer.style.display = 'block';
+        } else if (states[stateName]) {
+            states[stateName].style.display = 'block';
+        }
+    }
+    
+    // Функція відкриття модального вікна (симуляція basicLightbox)
+    function openModal(imageUrl, description) {
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        `;
+        
+        modal.innerHTML = `
+            <div style="position: relative; max-width: 90%; max-height: 90%; text-align: center;">
+                <img src="${imageUrl}" alt="${description}" style="max-width: 100%; max-height: 100%; border-radius: 4px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);" />
+                <p style="color: white; margin-top: 15px; font-size: 16px; max-width: 600px;">${description}</p>
+                <button onclick="this.closest('div').parentElement.remove()" style="position: absolute; top: -10px; right: -10px; background: white; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 18px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">×</button>
+            </div>
+        `;
+        
+        // Закриття по кліку на фон
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+        
+        // Закриття по Escape
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') {
+                modal.remove();
+                document.removeEventListener('keydown', handleEscape);
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+        
+        document.body.appendChild(modal);
+        
+        // Додаємо CSS для анімації
+        if (!document.querySelector('#modal-animation')) {
+            const style = document.createElement('style');
+            style.id = 'modal-animation';
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+    
+    // Функція показу toast-повідомлень
+    function showToast(message, type = 'info') {
+        const toast = document.createElement('div');
+        toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'error' ? '#d93025' : type === 'success' ? '#4caf50' : '#4285f4'};
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1001;
+            font-size: 14px;
+            animation: slideIn 0.3s ease-out;
+        `;
+        toast.textContent = message;
+        
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
+        
+        // Додаємо CSS для анімації
+        if (!document.querySelector('#toast-animation')) {
+            const style = document.createElement('style');
+            style.id = 'toast-animation';
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+    
+    // Початковий стан
+    showState('initial');
+    
+    console.log('🖼️ Image Gallery initialized with local images array!');
+    console.log('Available search terms:', ['nature', 'city', 'food', 'animals', 'technology', 'business', 'art']);
+};
+
+  sidebarButtonConclusion.onclick = function () {
+    showText('<b>Висновки до ЛР-6:</b><br><p>У ході виконання лабораторної роботи були опрацьовані основні аспекти сучасної веб-розробки:</p><ul><li><b>SASS препроцесор:</b> Дозволяє писати більш структурований та підтримуваний CSS код з використанням змінних, міксинів та вкладеності</li><li><b>GULP збірник:</b> Автоматизує процеси компіляції, мініфікації та оптимізації коду, значно прискорюючи розробку</li><li><b>Адаптивна верстка:</b> Використання сучасних підходів забезпечує коректне відображення на всіх пристроях</li></ul><p>Поєднання цих технологій дозволяє створювати професійні веб-сайти з ефективним робочим процесом розробки.</p>');
+  };
+  
+  break;
+}
+    }
 
     function showText(text) {
       const content = document.querySelector('.main-content');
